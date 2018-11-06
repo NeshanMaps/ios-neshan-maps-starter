@@ -47,43 +47,55 @@
     map.translatesAutoresizingMaskIntoConstraints = NO;
 
     [self.view insertSubview:map atIndex:0];
+    
+    [self.view addConstraints:[NSLayoutConstraint
+                               constraintsWithVisualFormat:@"H:|-0-[map]-0-|"
+                               options:NSLayoutFormatDirectionLeadingToTrailing
+                               metrics:nil
+                               views:NSDictionaryOfVariableBindings(map)]];
+    [self.view addConstraints:[NSLayoutConstraint
+                               constraintsWithVisualFormat:@"V:|-0-[map]-0-|"
+                               options:NSLayoutFormatDirectionLeadingToTrailing
+                               metrics:nil
+                               views:NSDictionaryOfVariableBindings(map)]];
 
-    NSLayoutConstraint *width =[NSLayoutConstraint
-                                constraintWithItem:map
-                                attribute:NSLayoutAttributeWidth
-                                relatedBy:0
-                                toItem:self.view
-                                attribute:NSLayoutAttributeWidth
-                                multiplier:1.0
-                                constant:0];
-    NSLayoutConstraint *height =[NSLayoutConstraint
-                                 constraintWithItem:map
-                                 attribute:NSLayoutAttributeHeight
-                                 relatedBy:0
-                                 toItem:self.view
-                                 attribute:NSLayoutAttributeHeight
-                                 multiplier:1.0
-                                 constant:0];
-    NSLayoutConstraint *top = [NSLayoutConstraint
-                               constraintWithItem:map
-                               attribute:NSLayoutAttributeTop
-                               relatedBy:NSLayoutRelationEqual
-                               toItem:self.view
-                               attribute:NSLayoutAttributeTop
-                               multiplier:1.0f
-                               constant:0.f];
-    NSLayoutConstraint *leading = [NSLayoutConstraint
-                                   constraintWithItem:map
-                                   attribute:NSLayoutAttributeLeading
-                                   relatedBy:NSLayoutRelationEqual
-                                   toItem:self.view
-                                   attribute:NSLayoutAttributeLeading
-                                   multiplier:1.0f
-                                   constant:0.f];
-    [self.view addConstraint:width];
-    [self.view addConstraint:height];
-    [self.view addConstraint:top];
-    [self.view addConstraint:leading];
+//
+//    NSLayoutConstraint *width =[NSLayoutConstraint
+//                                constraintWithItem:map
+//                                attribute:NSLayoutAttributeWidth
+//                                relatedBy:0
+//                                toItem:self.view
+//                                attribute:NSLayoutAttributeWidth
+//                                multiplier:1.0
+//                                constant:0];
+//    NSLayoutConstraint *height =[NSLayoutConstraint
+//                                 constraintWithItem:map
+//                                 attribute:NSLayoutAttributeHeight
+//                                 relatedBy:0
+//                                 toItem:self.view
+//                                 attribute:NSLayoutAttributeHeight
+//                                 multiplier:1.0
+//                                 constant:0];
+//    NSLayoutConstraint *top = [NSLayoutConstraint
+//                               constraintWithItem:map
+//                               attribute:NSLayoutAttributeTop
+//                               relatedBy:NSLayoutRelationEqual
+//                               toItem:self.view
+//                               attribute:NSLayoutAttributeTop
+//                               multiplier:1.0f
+//                               constant:0.f];
+//    NSLayoutConstraint *leading = [NSLayoutConstraint
+//                                   constraintWithItem:map
+//                                   attribute:NSLayoutAttributeLeading
+//                                   relatedBy:NSLayoutRelationEqual
+//                                   toItem:self.view
+//                                   attribute:NSLayoutAttributeLeading
+//                                   multiplier:1.0f
+//                                   constant:0.f];
+//    [self.view addConstraint:width];
+//    [self.view addConstraint:height];
+//    [self.view addConstraint:top];
+//    [self.view addConstraint:leading];
     
 }
 
