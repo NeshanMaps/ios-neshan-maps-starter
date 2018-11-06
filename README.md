@@ -12,7 +12,8 @@ Open terminal and execute this command to install Cocoapods on your mac OS:
 
 
 #### 1) Installing NeshanMobileSDK pod
-Open terminal and go to `ios-neshan-maps-starter` folder 
+Open terminal and go to `ios-neshan-maps-starter` folder
+
 Install NeshanMobileSDK pod, execute the following command:
 
 `pod install`
