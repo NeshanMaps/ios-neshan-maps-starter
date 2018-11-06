@@ -8,25 +8,21 @@
 
 #import "NeshanHelper.h"
 
-@interface NeshanHelper ()
+@implementation VectorElementClickedListener
 
+-(BOOL)onVectorElementClicked: (NTElementClickData*)clickInfo
+{
+    if (self.onVectorElementClickedBlock != nil)
+        return self.onVectorElementClickedBlock(clickInfo);
+    return NO;
+}
 @end
 
-@implementation NeshanHelper
+@implementation MapEventListener
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
+-(void)onMapClicked: (NTClickData*)clickInfo
+{
+    if (self.onMapClickedBlock != nil)
+        self.onMapClickedBlock(clickInfo);
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 @end

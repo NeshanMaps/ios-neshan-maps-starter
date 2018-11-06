@@ -7,15 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03704F062191978C00AEEB64 /* DrawLineController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03704F052191978C00AEEB64 /* DrawLineController.m */; };
+		03704F092191980E00AEEB64 /* NeshanHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 03704F082191980E00AEEB64 /* NeshanHelper.m */; };
+		03C856F3218F0A380084CE4B /* neshan.license in Resources */ = {isa = PBXBuildFile; fileRef = 03C856F2218F0A380084CE4B /* neshan.license */; };
+		03C856F8218F14D50084CE4B /* IRANSansMobile-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03C856F5218F14D50084CE4B /* IRANSansMobile-Bold.ttf */; };
+		03C856F9218F14D50084CE4B /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03C856F6218F14D50084CE4B /* FontAwesome.ttf */; };
+		03C856FA218F14D50084CE4B /* IRANSansMobile.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03C856F7218F14D50084CE4B /* IRANSansMobile.ttf */; };
+		03DA1C9E2190485A0015E08E /* AddMarkerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DA1C9D2190485A0015E08E /* AddMarkerController.m */; };
 		03F69366218F02B000A252AA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F69365218F02B000A252AA /* AppDelegate.m */; };
 		03F69369218F02B000A252AA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F69368218F02B000A252AA /* ViewController.m */; };
 		03F6936C218F02B000A252AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03F6936A218F02B000A252AA /* Main.storyboard */; };
 		03F6936E218F02B200A252AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03F6936D218F02B200A252AA /* Assets.xcassets */; };
 		03F69371218F02B200A252AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03F6936F218F02B200A252AA /* LaunchScreen.storyboard */; };
 		03F69374218F02B200A252AA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F69373218F02B200A252AA /* main.m */; };
+		7E064BA532EE2CE0E2A6F9A6 /* libPods-ios-neshan-maps-starter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D8FA95942854AB082D5D0D1 /* libPods-ios-neshan-maps-starter.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		03704F042191978C00AEEB64 /* DrawLineController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawLineController.h; sourceTree = "<group>"; };
+		03704F052191978C00AEEB64 /* DrawLineController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawLineController.m; sourceTree = "<group>"; };
+		03704F072191980E00AEEB64 /* NeshanHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NeshanHelper.h; sourceTree = "<group>"; };
+		03704F082191980E00AEEB64 /* NeshanHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NeshanHelper.m; sourceTree = "<group>"; };
+		03C856F2218F0A380084CE4B /* neshan.license */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = neshan.license; sourceTree = "<group>"; };
+		03C856F5218F14D50084CE4B /* IRANSansMobile-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IRANSansMobile-Bold.ttf"; sourceTree = "<group>"; };
+		03C856F6218F14D50084CE4B /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
+		03C856F7218F14D50084CE4B /* IRANSansMobile.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANSansMobile.ttf; sourceTree = "<group>"; };
+		03DA1C9C2190485A0015E08E /* AddMarkerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddMarkerController.h; sourceTree = "<group>"; };
+		03DA1C9D2190485A0015E08E /* AddMarkerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddMarkerController.m; sourceTree = "<group>"; };
 		03F69361218F02B000A252AA /* ios-neshan-maps-starter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-neshan-maps-starter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		03F69364218F02B000A252AA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		03F69365218F02B000A252AA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -26,6 +44,9 @@
 		03F69370218F02B200A252AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		03F69372218F02B200A252AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03F69373218F02B200A252AA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8D8FA95942854AB082D5D0D1 /* libPods-ios-neshan-maps-starter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ios-neshan-maps-starter.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C691BABCCAC8D7580FD1755B /* Pods-ios-neshan-maps-starter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-neshan-maps-starter.release.xcconfig"; path = "Pods/Target Support Files/Pods-ios-neshan-maps-starter/Pods-ios-neshan-maps-starter.release.xcconfig"; sourceTree = "<group>"; };
+		E3E8EB1790CF662F3DAC5BE3 /* Pods-ios-neshan-maps-starter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-neshan-maps-starter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ios-neshan-maps-starter/Pods-ios-neshan-maps-starter.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +54,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E064BA532EE2CE0E2A6F9A6 /* libPods-ios-neshan-maps-starter.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03C856F4218F14D50084CE4B /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				03C856F5218F14D50084CE4B /* IRANSansMobile-Bold.ttf */,
+				03C856F6218F14D50084CE4B /* FontAwesome.ttf */,
+				03C856F7218F14D50084CE4B /* IRANSansMobile.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
 		03F69358218F02B000A252AA = {
 			isa = PBXGroup;
 			children = (
+				03C856F2218F0A380084CE4B /* neshan.license */,
 				03F69363218F02B000A252AA /* ios-neshan-maps-starter */,
 				03F69362218F02B000A252AA /* Products */,
+				DF9121A9B19E804BC396F76D /* Pods */,
+				2171D23C68FFA5172F0FF96E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +93,7 @@
 		03F69363218F02B000A252AA /* ios-neshan-maps-starter */ = {
 			isa = PBXGroup;
 			children = (
+				03C856F4218F14D50084CE4B /* fonts */,
 				03F69364218F02B000A252AA /* AppDelegate.h */,
 				03F69365218F02B000A252AA /* AppDelegate.m */,
 				03F69367218F02B000A252AA /* ViewController.h */,
@@ -67,8 +103,31 @@
 				03F6936F218F02B200A252AA /* LaunchScreen.storyboard */,
 				03F69372218F02B200A252AA /* Info.plist */,
 				03F69373218F02B200A252AA /* main.m */,
+				03704F072191980E00AEEB64 /* NeshanHelper.h */,
+				03704F082191980E00AEEB64 /* NeshanHelper.m */,
+				03DA1C9C2190485A0015E08E /* AddMarkerController.h */,
+				03DA1C9D2190485A0015E08E /* AddMarkerController.m */,
+				03704F042191978C00AEEB64 /* DrawLineController.h */,
+				03704F052191978C00AEEB64 /* DrawLineController.m */,
 			);
 			path = "ios-neshan-maps-starter";
+			sourceTree = "<group>";
+		};
+		2171D23C68FFA5172F0FF96E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8D8FA95942854AB082D5D0D1 /* libPods-ios-neshan-maps-starter.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DF9121A9B19E804BC396F76D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E3E8EB1790CF662F3DAC5BE3 /* Pods-ios-neshan-maps-starter.debug.xcconfig */,
+				C691BABCCAC8D7580FD1755B /* Pods-ios-neshan-maps-starter.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -78,6 +137,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 03F69377218F02B200A252AA /* Build configuration list for PBXNativeTarget "ios-neshan-maps-starter" */;
 			buildPhases = (
+				37CACD6E056822D3F4B95DF0 /* [CP] Check Pods Manifest.lock */,
 				03F6935D218F02B000A252AA /* Sources */,
 				03F6935E218F02B000A252AA /* Frameworks */,
 				03F6935F218F02B000A252AA /* Resources */,
@@ -128,22 +188,54 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03C856F3218F0A380084CE4B /* neshan.license in Resources */,
+				03C856FA218F14D50084CE4B /* IRANSansMobile.ttf in Resources */,
 				03F69371218F02B200A252AA /* LaunchScreen.storyboard in Resources */,
+				03C856F8218F14D50084CE4B /* IRANSansMobile-Bold.ttf in Resources */,
 				03F6936E218F02B200A252AA /* Assets.xcassets in Resources */,
 				03F6936C218F02B000A252AA /* Main.storyboard in Resources */,
+				03C856F9218F14D50084CE4B /* FontAwesome.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		37CACD6E056822D3F4B95DF0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ios-neshan-maps-starter-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		03F6935D218F02B000A252AA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03704F092191980E00AEEB64 /* NeshanHelper.m in Sources */,
 				03F69369218F02B000A252AA /* ViewController.m in Sources */,
 				03F69374218F02B200A252AA /* main.m in Sources */,
 				03F69366218F02B000A252AA /* AppDelegate.m in Sources */,
+				03DA1C9E2190485A0015E08E /* AddMarkerController.m in Sources */,
+				03704F062191978C00AEEB64 /* DrawLineController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +373,7 @@
 		};
 		03F69378218F02B200A252AA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E3E8EB1790CF662F3DAC5BE3 /* Pods-ios-neshan-maps-starter.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -290,6 +383,27 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-l\"c++\"",
+					"-l\"z\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"GLKit\"",
+					"-framework",
+					"\"NeshanMobileSDK\"",
+					"-framework",
+					"\"OpenGLES\"",
+					"-framework",
+					"\"UIKit\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.neshan.ios-neshan-maps-starter";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -298,6 +412,7 @@
 		};
 		03F69379218F02B200A252AA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C691BABCCAC8D7580FD1755B /* Pods-ios-neshan-maps-starter.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -306,6 +421,27 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-l\"c++\"",
+					"-l\"z\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"GLKit\"",
+					"-framework",
+					"\"NeshanMobileSDK\"",
+					"-framework",
+					"\"OpenGLES\"",
+					"-framework",
+					"\"UIKit\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.neshan.ios-neshan-maps-starter";
 				PRODUCT_NAME = "$(TARGET_NAME)";

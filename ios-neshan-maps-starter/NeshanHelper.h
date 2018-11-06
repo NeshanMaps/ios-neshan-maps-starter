@@ -7,10 +7,22 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <NeshanMobileSDK/NeshanMobileSDK.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NeshanHelper : UIViewController
+
+@interface VectorElementClickedListener: NTVectorElementEventListener
+
+typedef BOOL (^OnVectorElementClickedBlock)(NTElementClickData* clickInfo);
+@property (readwrite, copy) OnVectorElementClickedBlock onVectorElementClickedBlock;
+
+@end
+
+@interface MapEventListener: NTMapEventListener
+
+typedef void (^OnMapClickedBlock)(NTClickData* clickInfo);
+@property (readwrite, copy) OnMapClickedBlock onMapClickedBlock;
 
 @end
 
