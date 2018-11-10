@@ -24,6 +24,9 @@ typedef BOOL (^OnVectorElementClickedBlock)(NTElementClickData* clickInfo);
 typedef void (^OnMapClickedBlock)(NTClickData* clickInfo);
 @property (readwrite, copy) OnMapClickedBlock onMapClickedBlock;
 
+typedef void (^OnMapMovedBlock)(void);
+@property (readwrite, copy) OnMapMovedBlock onMapMovedBlock;
+
 @end
 
 NS_ASSUME_NONNULL_END

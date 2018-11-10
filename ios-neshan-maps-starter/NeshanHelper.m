@@ -25,4 +25,11 @@
     if (self.onMapClickedBlock != nil)
         self.onMapClickedBlock(clickInfo);
 }
+
+-(void) onMapMoved
+{
+    if (self.onMapMovedBlock != nil)
+        self.onMapMovedBlock();
+}
+
 @end

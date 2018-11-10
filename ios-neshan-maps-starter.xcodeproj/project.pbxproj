@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		03704F062191978C00AEEB64 /* DrawLineController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03704F052191978C00AEEB64 /* DrawLineController.m */; };
 		03704F092191980E00AEEB64 /* NeshanHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 03704F082191980E00AEEB64 /* NeshanHelper.m */; };
+		03BF1FB32196AEF50095BB69 /* DrawPolygonController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03BF1FB22196AEF50095BB69 /* DrawPolygonController.m */; };
+		03BF1FB62196CC450095BB69 /* ChangeCameraTiltController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03BF1FB52196CC450095BB69 /* ChangeCameraTiltController.m */; };
+		03BF1FB92196FA310095BB69 /* ChangeCameraBearingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03BF1FB82196FA310095BB69 /* ChangeCameraBearingController.m */; };
+		03BF1FBC219701330095BB69 /* ChangeStyleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03BF1FBB219701330095BB69 /* ChangeStyleController.m */; };
 		03C856F3218F0A380084CE4B /* neshan.license in Resources */ = {isa = PBXBuildFile; fileRef = 03C856F2218F0A380084CE4B /* neshan.license */; };
 		03C856F8218F14D50084CE4B /* IRANSansMobile-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03C856F5218F14D50084CE4B /* IRANSansMobile-Bold.ttf */; };
 		03C856F9218F14D50084CE4B /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03C856F6218F14D50084CE4B /* FontAwesome.ttf */; };
@@ -28,6 +32,14 @@
 		03704F052191978C00AEEB64 /* DrawLineController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawLineController.m; sourceTree = "<group>"; };
 		03704F072191980E00AEEB64 /* NeshanHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NeshanHelper.h; sourceTree = "<group>"; };
 		03704F082191980E00AEEB64 /* NeshanHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NeshanHelper.m; sourceTree = "<group>"; };
+		03BF1FB12196AEF40095BB69 /* DrawPolygonController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawPolygonController.h; sourceTree = "<group>"; };
+		03BF1FB22196AEF50095BB69 /* DrawPolygonController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawPolygonController.m; sourceTree = "<group>"; };
+		03BF1FB42196CC450095BB69 /* ChangeCameraTiltController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChangeCameraTiltController.h; sourceTree = "<group>"; };
+		03BF1FB52196CC450095BB69 /* ChangeCameraTiltController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChangeCameraTiltController.m; sourceTree = "<group>"; };
+		03BF1FB72196FA310095BB69 /* ChangeCameraBearingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangeCameraBearingController.h; sourceTree = "<group>"; };
+		03BF1FB82196FA310095BB69 /* ChangeCameraBearingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangeCameraBearingController.m; sourceTree = "<group>"; };
+		03BF1FBA219701330095BB69 /* ChangeStyleController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChangeStyleController.h; sourceTree = "<group>"; };
+		03BF1FBB219701330095BB69 /* ChangeStyleController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChangeStyleController.m; sourceTree = "<group>"; };
 		03C856F2218F0A380084CE4B /* neshan.license */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = neshan.license; sourceTree = "<group>"; };
 		03C856F5218F14D50084CE4B /* IRANSansMobile-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IRANSansMobile-Bold.ttf"; sourceTree = "<group>"; };
 		03C856F6218F14D50084CE4B /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
@@ -109,6 +121,14 @@
 				03DA1C9D2190485A0015E08E /* AddMarkerController.m */,
 				03704F042191978C00AEEB64 /* DrawLineController.h */,
 				03704F052191978C00AEEB64 /* DrawLineController.m */,
+				03BF1FB12196AEF40095BB69 /* DrawPolygonController.h */,
+				03BF1FB22196AEF50095BB69 /* DrawPolygonController.m */,
+				03BF1FB42196CC450095BB69 /* ChangeCameraTiltController.h */,
+				03BF1FB52196CC450095BB69 /* ChangeCameraTiltController.m */,
+				03BF1FB72196FA310095BB69 /* ChangeCameraBearingController.h */,
+				03BF1FB82196FA310095BB69 /* ChangeCameraBearingController.m */,
+				03BF1FBA219701330095BB69 /* ChangeStyleController.h */,
+				03BF1FBB219701330095BB69 /* ChangeStyleController.m */,
 			);
 			path = "ios-neshan-maps-starter";
 			sourceTree = "<group>";
@@ -231,11 +251,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				03704F092191980E00AEEB64 /* NeshanHelper.m in Sources */,
+				03BF1FB92196FA310095BB69 /* ChangeCameraBearingController.m in Sources */,
 				03F69369218F02B000A252AA /* ViewController.m in Sources */,
 				03F69374218F02B200A252AA /* main.m in Sources */,
 				03F69366218F02B000A252AA /* AppDelegate.m in Sources */,
+				03BF1FBC219701330095BB69 /* ChangeStyleController.m in Sources */,
 				03DA1C9E2190485A0015E08E /* AddMarkerController.m in Sources */,
 				03704F062191978C00AEEB64 /* DrawLineController.m in Sources */,
+				03BF1FB32196AEF50095BB69 /* DrawPolygonController.m in Sources */,
+				03BF1FB62196CC450095BB69 /* ChangeCameraTiltController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

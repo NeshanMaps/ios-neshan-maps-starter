@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14252.5"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -47,8 +48,11 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ltO-Nd-EkY">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ltO-Nd-EkY">
                                 <rect key="frame" x="16" y="213" width="165" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="fTD-DS-Ltu"/>
+                                </constraints>
                                 <state key="normal" image="Layer 2"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="self.imageView.contentMode">
@@ -59,8 +63,11 @@
                                     <segue destination="eN4-8S-ozV" kind="show" id="vqM-tm-TOa"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1CV-Ez-scj">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1CV-Ez-scj">
                                 <rect key="frame" x="194" y="213" width="165" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="OXS-Ys-tcE"/>
+                                </constraints>
                                 <state key="normal" image="Layer 3"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="self.imageView.contentMode">
@@ -71,23 +78,125 @@
                                     <segue destination="RoE-0d-gah" kind="show" id="MWd-TX-e50"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lzu-Ab-qi2">
+                                <rect key="frame" x="16" y="311" width="165" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="2De-qi-xbW"/>
+                                </constraints>
+                                <state key="normal" image="Layer 4"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="self.imageView.contentMode">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="vXW-Mp-aya" kind="show" id="mf6-UB-mVr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vyo-hL-gqd">
+                                <rect key="frame" x="194" y="311" width="165" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="Qu6-KA-iJD"/>
+                                </constraints>
+                                <state key="normal" image="Layer 5"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="self.imageView.contentMode">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="2tb-GF-8A6" kind="show" id="SfU-xK-tTG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="01J-8B-iTQ">
+                                <rect key="frame" x="16" y="409" width="165" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="ZYm-Mt-8kT"/>
+                                </constraints>
+                                <state key="normal" image="Layer 6"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="self.imageView.contentMode">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="9bf-rX-qib" kind="show" id="UPx-sz-Lwj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lLv-pj-y6w">
+                                <rect key="frame" x="194" y="409" width="165" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="GpB-4Y-aoY"/>
+                                </constraints>
+                                <state key="normal" image="Layer 7"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="self.imageView.contentMode">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="tHj-Ej-v8h" kind="show" id="59R-rs-vKa"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="09b-Q9-FR4">
+                                <rect key="frame" x="16" y="507" width="165" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="UiC-wr-Gf3"/>
+                                </constraints>
+                                <state key="normal" image="Layer 8"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="self.imageView.contentMode">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZUQ-uW-1bI">
+                                <rect key="frame" x="194" y="507" width="165" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="AdK-9d-fYA"/>
+                                </constraints>
+                                <state key="normal" image="Layer 9"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="self.imageView.contentMode">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1CV-Ez-scj" secondAttribute="trailing" constant="16" id="01d-zV-Nm6"/>
+                            <constraint firstItem="vyo-hL-gqd" firstAttribute="leading" secondItem="Lzu-Ab-qi2" secondAttribute="trailing" constant="13" id="1dd-eh-8fZ"/>
                             <constraint firstItem="ltO-Nd-EkY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="2vy-wF-fPw"/>
                             <constraint firstItem="xpr-yc-E2z" firstAttribute="centerY" secondItem="NhT-u3-b5Q" secondAttribute="centerY" id="3cu-rr-18l"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZUQ-uW-1bI" secondAttribute="trailing" constant="16" id="ECm-Rv-uwH"/>
                             <constraint firstItem="uP5-4k-H4C" firstAttribute="centerY" secondItem="w0F-Bf-SKQ" secondAttribute="centerY" id="FJJ-ZJ-9SU"/>
+                            <constraint firstItem="01J-8B-iTQ" firstAttribute="centerY" secondItem="lLv-pj-y6w" secondAttribute="centerY" id="FXd-fM-GJk"/>
                             <constraint firstItem="ltO-Nd-EkY" firstAttribute="width" secondItem="1CV-Ez-scj" secondAttribute="width" id="GBV-re-J5w"/>
+                            <constraint firstItem="09b-Q9-FR4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="GPy-qV-FHV"/>
                             <constraint firstItem="uP5-4k-H4C" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="KXh-zZ-hQ9"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xpr-yc-E2z" secondAttribute="trailing" constant="9" id="LnS-oA-dnh"/>
                             <constraint firstItem="w0F-Bf-SKQ" firstAttribute="top" secondItem="NhT-u3-b5Q" secondAttribute="bottom" constant="8.5" id="Mtf-c2-LRT"/>
                             <constraint firstItem="ltO-Nd-EkY" firstAttribute="centerY" secondItem="1CV-Ez-scj" secondAttribute="centerY" id="UIl-5O-Enl"/>
+                            <constraint firstItem="lLv-pj-y6w" firstAttribute="top" secondItem="vyo-hL-gqd" secondAttribute="bottom" constant="8" id="VWU-Mn-1U6"/>
                             <constraint firstItem="xpr-yc-E2z" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="WSN-Vp-Xx4"/>
+                            <constraint firstItem="09b-Q9-FR4" firstAttribute="width" secondItem="ZUQ-uW-1bI" secondAttribute="width" id="XFz-KW-7cq"/>
                             <constraint firstItem="xpr-yc-E2z" firstAttribute="leading" secondItem="NhT-u3-b5Q" secondAttribute="trailing" constant="2" id="Y4Y-qY-Exd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lLv-pj-y6w" secondAttribute="trailing" constant="16" id="d4z-BL-Ld6"/>
+                            <constraint firstItem="01J-8B-iTQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="dDl-P7-dtX"/>
                             <constraint firstItem="1CV-Ez-scj" firstAttribute="top" secondItem="xpr-yc-E2z" secondAttribute="bottom" constant="8" id="iVp-ac-ctN"/>
                             <constraint firstItem="1CV-Ez-scj" firstAttribute="leading" secondItem="ltO-Nd-EkY" secondAttribute="trailing" constant="13" id="j5C-DF-OiC"/>
+                            <constraint firstItem="09b-Q9-FR4" firstAttribute="centerY" secondItem="ZUQ-uW-1bI" secondAttribute="centerY" id="jsb-dR-0W7"/>
+                            <constraint firstItem="lLv-pj-y6w" firstAttribute="leading" secondItem="01J-8B-iTQ" secondAttribute="trailing" constant="13" id="l1z-xy-kJB"/>
+                            <constraint firstItem="Lzu-Ab-qi2" firstAttribute="centerY" secondItem="vyo-hL-gqd" secondAttribute="centerY" id="li6-A3-IeW"/>
                             <constraint firstItem="NhT-u3-b5Q" firstAttribute="trailing" secondItem="w0F-Bf-SKQ" secondAttribute="trailing" id="nwJ-BO-deL"/>
+                            <constraint firstItem="Lzu-Ab-qi2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="oQf-eh-hKU"/>
+                            <constraint firstItem="Lzu-Ab-qi2" firstAttribute="width" secondItem="vyo-hL-gqd" secondAttribute="width" id="ofD-yJ-ccO"/>
+                            <constraint firstItem="ZUQ-uW-1bI" firstAttribute="leading" secondItem="09b-Q9-FR4" secondAttribute="trailing" constant="13" id="qDe-em-Fp8"/>
+                            <constraint firstItem="01J-8B-iTQ" firstAttribute="width" secondItem="lLv-pj-y6w" secondAttribute="width" id="qzs-SU-oLU"/>
+                            <constraint firstItem="vyo-hL-gqd" firstAttribute="top" secondItem="1CV-Ez-scj" secondAttribute="bottom" constant="8" id="snW-jc-qrI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vyo-hL-gqd" secondAttribute="trailing" constant="16" id="szR-20-HM5"/>
+                            <constraint firstItem="ZUQ-uW-1bI" firstAttribute="top" secondItem="lLv-pj-y6w" secondAttribute="bottom" constant="8" id="ybh-oq-0Os"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -98,7 +207,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1076" y="133.5832083958021"/>
+            <point key="canvasLocation" x="919" y="-63"/>
         </scene>
         <!--Add Marker Controller-->
         <scene sceneID="L8O-gi-ca5">
@@ -113,7 +222,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wK6-EG-VGy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2002" y="-519"/>
+            <point key="canvasLocation" x="2047" y="-1041"/>
         </scene>
         <!--Draw Line Controller-->
         <scene sceneID="GFG-l5-PMJ">
@@ -129,6 +238,21 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="17"/>
                                 <state key="normal" title="رسم خط"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadius">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOpacity">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
+                                        <size key="value" width="2" height="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="drawLineGeom:" destination="RoE-0d-gah" eventType="touchUpInside" id="Q9D-Us-J0Q"/>
                                 </connections>
@@ -140,7 +264,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hn5-Q7-hhk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2000.8" y="142.57871064467767"/>
+            <point key="canvasLocation" x="2047" y="-379"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="sy7-tj-xQ0">
@@ -158,12 +282,305 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VZe-hT-Py2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+            <point key="canvasLocation" x="-20" y="-63"/>
+        </scene>
+        <!--Draw Polygon Controller-->
+        <scene sceneID="sZK-AH-gGR">
+            <objects>
+                <viewController id="vXW-Mp-aya" customClass="DrawPolygonController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Z40-V9-6JA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BcR-Mj-vXa">
+                                <rect key="frame" x="136" y="607" width="104" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="17"/>
+                                <state key="normal" title="رسم چندضلعی"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadius">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOpacity">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
+                                        <size key="value" width="2" height="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="drawPolygonGeom:" destination="vXW-Mp-aya" eventType="touchUpInside" id="ItJ-ST-xEI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="mLA-G9-ICy"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TBP-Fc-ed5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2047" y="280"/>
+        </scene>
+        <!--Change Camera Tilt Controller-->
+        <scene sceneID="EUS-l9-S0K">
+            <objects>
+                <viewController id="2tb-GF-8A6" customClass="ChangeCameraTiltController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FZi-aZ-xBw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cMa-Sw-cFa">
+                                <rect key="frame" x="16" y="100" width="343" height="65"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="90" minValue="30" maxValue="90" translatesAutoresizingMaskIntoConstraints="NO" id="35x-xG-dfw">
+                                        <rect key="frame" x="71" y="17" width="201" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="sliderChanged:" destination="2tb-GF-8A6" eventType="valueChanged" id="zd8-pm-CXx"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="۳۰ درجه" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kv9-hi-W6F">
+                                        <rect key="frame" x="5" y="21" width="65" height="22"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="۹۰ درجه" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eM5-KR-v9s">
+                                        <rect key="frame" x="284" y="21" width="56" height="22"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadius">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOpacity">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
+                                        <size key="value" width="2" height="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="exJ-ex-Fdd">
+                                <rect key="frame" x="104" y="601" width="167" height="46"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=" تغییر زاویه" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QIb-fE-XdP">
+                                        <rect key="frame" x="82" y="12" width="77" height="22"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES"/>
+                                        <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZQh-hM-83K">
+                                        <rect key="frame" x="27" y="8" width="49" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <connections>
+                                            <action selector="toggleCameraTilt:" destination="2tb-GF-8A6" eventType="valueChanged" id="drM-O9-QDZ"/>
+                                        </connections>
+                                    </switch>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadius">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOpacity">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
+                                        <size key="value" width="2" height="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="eYv-Na-Wdb"/>
+                    </view>
+                    <connections>
+                        <outlet property="tiltSlider" destination="35x-xG-dfw" id="FEJ-0M-ccu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9NV-1e-HWj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2045.5999999999999" y="946.77661169415296"/>
+        </scene>
+        <!--Change Camera Bearing Controller-->
+        <scene sceneID="nKc-oI-GSr">
+            <objects>
+                <viewController id="9bf-rX-qib" customClass="ChangeCameraBearingController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GO3-Ri-1FS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mta-p9-Zmu">
+                                <rect key="frame" x="16" y="100" width="343" height="65"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-179" maxValue="180" translatesAutoresizingMaskIntoConstraints="NO" id="BYr-VK-PEv">
+                                        <rect key="frame" x="71" y="17" width="201" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="sliderChanged:" destination="9bf-rX-qib" eventType="valueChanged" id="hOg-2t-L5q"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="۱۸۰- درجه" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lTw-2B-Sdp">
+                                        <rect key="frame" x="5" y="21" width="58" height="19"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="۱۸۰ درجه" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SiL-ju-pbD">
+                                        <rect key="frame" x="284" y="21" width="54" height="19"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadius">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOpacity">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
+                                        <size key="value" width="2" height="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Huf-Dh-BhD">
+                                <rect key="frame" x="104" y="601" width="167" height="46"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=" تغییر جهت" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WfJ-Qy-LGt">
+                                        <rect key="frame" x="82" y="12" width="81" height="22"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES"/>
+                                        <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nrE-gb-sLy">
+                                        <rect key="frame" x="27" y="8" width="49" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <connections>
+                                            <action selector="toggleCameraBearing:" destination="9bf-rX-qib" eventType="valueChanged" id="9V8-sk-Vdf"/>
+                                        </connections>
+                                    </switch>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadius">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOpacity">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
+                                        <size key="value" width="2" height="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="2af-fw-hdF"/>
+                    </view>
+                    <connections>
+                        <outlet property="bearingSlider" destination="BYr-VK-PEv" id="lRS-td-3Us"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="icm-d5-vd2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2885.5999999999999" y="946.77661169415296"/>
+        </scene>
+        <!--Change Style Controller-->
+        <scene sceneID="DUv-BX-I0k">
+            <objects>
+                <viewController id="tHj-Ej-v8h" customClass="ChangeStyleController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GB9-8B-aWh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wXR-P9-H2m">
+                                <rect key="frame" x="259" y="567" width="100" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                <state key="normal" image="map_style_standard_day"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="self.imageView.contentMode">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadius">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOpacity">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
+                                        <size key="value" width="2" height="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="changeStyle:" destination="tHj-Ej-v8h" eventType="touchUpInside" id="9x7-KJ-5To"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ymS-H3-LHU"/>
+                    </view>
+                    <connections>
+                        <outlet property="themePreview" destination="wXR-P9-H2m" id="nGT-hH-h0V"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1B1-Nw-q7w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2886" y="279"/>
         </scene>
     </scenes>
     <resources>
         <image name="Layer 2" width="259" height="131"/>
         <image name="Layer 3" width="259" height="131"/>
+        <image name="Layer 4" width="259" height="131"/>
+        <image name="Layer 5" width="259" height="131"/>
+        <image name="Layer 6" width="259" height="131"/>
+        <image name="Layer 7" width="259" height="131"/>
+        <image name="Layer 8" width="259" height="131"/>
+        <image name="Layer 9" width="259" height="131"/>
         <image name="ic_neshan_logo" width="131" height="131"/>
+        <image name="map_style_standard_day" width="100" height="80"/>
     </resources>
 </document>
