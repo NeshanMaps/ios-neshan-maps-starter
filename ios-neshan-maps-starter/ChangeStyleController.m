@@ -45,13 +45,13 @@
 -(void) validateThemePreview {
     switch (mapStyle) {
         case NT_STANDARD_DAY:
-            [self.themePreview setImage:[UIImage imageNamed:@"map_style_standard_day"] forState:UIControlStateNormal];
-            break;
-        case NT_STANDARD_NIGHT:
             [self.themePreview setImage:[UIImage imageNamed:@"map_style_standard_night"] forState:UIControlStateNormal];
             break;
-        case NT_NESHAN:
+        case NT_STANDARD_NIGHT:
             [self.themePreview setImage:[UIImage imageNamed:@"map_style_neshan"] forState:UIControlStateNormal];
+            break;
+        case NT_NESHAN:
+            [self.themePreview setImage:[UIImage imageNamed:@"map_style_standard_day"] forState:UIControlStateNormal];
             break;
     }
     
