@@ -55,10 +55,21 @@
             break;
     }
     
-//    Toast.makeText(ChangeStyle.this, mapStyle.name(), Toast.LENGTH_SHORT).show();
+    [self toast:mapStyle ==  NT_STANDARD_DAY ? @"روز استاندارد":mapStyle ==  NT_STANDARD_NIGHT ? @"شب استاندارد" : @"نشان"];
 }
 
+-(void) toast:(NSString *)message {
+    
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil
+                                                                   message:message
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+   
+    [self presentViewController:alert animated:YES completion:nil];
 
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 2 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+        [alert dismissViewControllerAnimated:YES completion:nil];
+    });
+}
 // We use findViewByID for every element in our layout file here
 -(void)initViews{
     map = [NTMapView new];

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03619AF92198324E00DEFADB /* UserLocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03619AF82198324E00DEFADB /* UserLocationController.m */; };
+		03619AFB219834EE00DEFADB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03619AFA219834ED00DEFADB /* CoreLocation.framework */; };
 		03704F062191978C00AEEB64 /* DrawLineController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03704F052191978C00AEEB64 /* DrawLineController.m */; };
 		03704F092191980E00AEEB64 /* NeshanHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 03704F082191980E00AEEB64 /* NeshanHelper.m */; };
 		03BF1FB32196AEF50095BB69 /* DrawPolygonController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03BF1FB22196AEF50095BB69 /* DrawPolygonController.m */; };
@@ -28,6 +30,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		03619AF72198324E00DEFADB /* UserLocationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserLocationController.h; sourceTree = "<group>"; };
+		03619AF82198324E00DEFADB /* UserLocationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserLocationController.m; sourceTree = "<group>"; };
+		03619AFA219834ED00DEFADB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		03704F042191978C00AEEB64 /* DrawLineController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawLineController.h; sourceTree = "<group>"; };
 		03704F052191978C00AEEB64 /* DrawLineController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawLineController.m; sourceTree = "<group>"; };
 		03704F072191980E00AEEB64 /* NeshanHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NeshanHelper.h; sourceTree = "<group>"; };
@@ -66,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03619AFB219834EE00DEFADB /* CoreLocation.framework in Frameworks */,
 				7E064BA532EE2CE0E2A6F9A6 /* libPods-ios-neshan-maps-starter.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -129,6 +135,8 @@
 				03BF1FB82196FA310095BB69 /* ChangeCameraBearingController.m */,
 				03BF1FBA219701330095BB69 /* ChangeStyleController.h */,
 				03BF1FBB219701330095BB69 /* ChangeStyleController.m */,
+				03619AF72198324E00DEFADB /* UserLocationController.h */,
+				03619AF82198324E00DEFADB /* UserLocationController.m */,
 			);
 			path = "ios-neshan-maps-starter";
 			sourceTree = "<group>";
@@ -136,6 +144,7 @@
 		2171D23C68FFA5172F0FF96E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				03619AFA219834ED00DEFADB /* CoreLocation.framework */,
 				8D8FA95942854AB082D5D0D1 /* libPods-ios-neshan-maps-starter.a */,
 			);
 			name = Frameworks;
@@ -256,6 +265,7 @@
 				03F69374218F02B200A252AA /* main.m in Sources */,
 				03F69366218F02B000A252AA /* AppDelegate.m in Sources */,
 				03BF1FBC219701330095BB69 /* ChangeStyleController.m in Sources */,
+				03619AF92198324E00DEFADB /* UserLocationController.m in Sources */,
 				03DA1C9E2190485A0015E08E /* AddMarkerController.m in Sources */,
 				03704F062191978C00AEEB64 /* DrawLineController.m in Sources */,
 				03BF1FB32196AEF50095BB69 /* DrawPolygonController.m in Sources */,
