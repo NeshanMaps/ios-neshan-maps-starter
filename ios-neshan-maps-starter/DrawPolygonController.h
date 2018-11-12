@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <NeshanMobileSDK/NeshanMobileSDK.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface DrawPolygonController : UIViewController
+@property (strong, nonatomic) IBOutlet NTMapView *map;
 - (IBAction)drawPolygonGeom:(id)sender;
 
 @end

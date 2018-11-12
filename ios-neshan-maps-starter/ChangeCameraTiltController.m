@@ -7,7 +7,6 @@
 //
 
 #import "ChangeCameraTiltController.h"
-#import <NeshanMobileSDK/NeshanMobileSDK.h>
 #import "NeshanHelper.h"
 
 
@@ -18,9 +17,6 @@
 @implementation ChangeCameraTiltController{
     // layer number in which map is added
     #define BASE_MAP_INDEX 0
-    
-    // map UI element
-    NTMapView *map;
     
     BOOL isCameraTiltEnable;
 }
@@ -39,12 +35,12 @@
         
         // updating own ui element must run on ui thread not in map ui thread
         dispatch_async(dispatch_get_main_queue(), ^{
-            if (self.tiltSlider.value !=[self->map getTilt])
-                [self.tiltSlider setValue:[self->map getTilt]];
+            if (self.tiltSlider.value !=[self.map getTilt])
+                [self.tiltSlider setValue:[self.map getTilt]];
         });
     };
     
-    [map setMapEventListener: mapEventListener];
+    [self.map setMapEventListener: mapEventListener];
 }
 
 // Initializing layout references (views, map and map events)
@@ -55,42 +51,26 @@
     [self initMap];
 }
 
-// We use findViewByID for every element in our layout file here
 -(void)initViews{
-    map = [NTMapView new];
-    map.translatesAutoresizingMaskIntoConstraints = NO;
-    
-    [self.view insertSubview:map atIndex:0];
-    
-    [self.view addConstraints:[NSLayoutConstraint
-                               constraintsWithVisualFormat:@"H:|-0-[map]-0-|"
-                               options:NSLayoutFormatDirectionLeadingToTrailing
-                               metrics:nil
-                               views:NSDictionaryOfVariableBindings(map)]];
-    [self.view addConstraints:[NSLayoutConstraint
-                               constraintsWithVisualFormat:@"V:|-0-[map]-0-|"
-                               options:NSLayoutFormatDirectionLeadingToTrailing
-                               metrics:nil
-                               views:NSDictionaryOfVariableBindings(map)]];
 }
 
 // Initializing map
 -(void) initMap{
     
     // add Standard_day map to layer BASE_MAP_INDEX
-    [[map getOptions] setZoomRange:[[NTRange alloc] initWithMin:4.5 max:18]];
-    [[map getLayers] insert:BASE_MAP_INDEX layer:[NTNeshanServices createBaseMap:NT_STANDARD_DAY]];
+    [[self.map getOptions] setZoomRange:[[NTRange alloc] initWithMin:4.5 max:18]];
+    [[self.map getLayers] insert:BASE_MAP_INDEX layer:[NTNeshanServices createBaseMap:NT_STANDARD_DAY]];
     
     // Setting map focal position to a fixed position and setting camera zoom
-    [map setFocalPointPosition: [[NTLngLat alloc] initWithX:51.330743 y:35.767234] durationSeconds:0];
-    [map setZoom:14 durationSeconds:0];
+    [self.map setFocalPointPosition: [[NTLngLat alloc] initWithX:51.330743 y:35.767234] durationSeconds:0];
+    [self.map setZoom:14 durationSeconds:0];
 }
 
 - (IBAction)sliderChanged:(id)sender {
     // change camera tilt programmatically
 
-    if ([map getTilt] != self.tiltSlider.value)
-        [map setTilt:self.tiltSlider.value durationSeconds:0];
+    if ([self.map getTilt] != self.tiltSlider.value)
+        [self.map setTilt:self.tiltSlider.value durationSeconds:0];
 }
 
 - (IBAction)toggleCameraTilt:(id)sender{

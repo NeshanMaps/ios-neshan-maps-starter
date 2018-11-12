@@ -29,4 +29,8 @@ typedef void (^OnMapMovedBlock)(void);
 
 @end
 
+@interface NeshanHelper: NSObject
++(void) toast:(UIViewController *)parent message:(NSString *)message;
+@end
+
 NS_ASSUME_NONNULL_END

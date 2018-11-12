@@ -156,7 +156,7 @@
                                     <segue destination="Z91-MQ-Vem" kind="show" id="i50-0K-Uxq"/>
                                 </connections>
                             </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZUQ-uW-1bI">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZUQ-uW-1bI">
                                 <rect key="frame" x="194" y="507" width="165" height="90"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="90" id="AdK-9d-fYA"/>
@@ -167,6 +167,39 @@
                                         <integer key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="nhi-tv-De4" kind="show" id="0kT-7f-l8i"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FTw-c8-CHW">
+                                <rect key="frame" x="16" y="605" width="165" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="A0Z-WQ-8zn"/>
+                                </constraints>
+                                <state key="normal" image="Layer 10"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="self.imageView.contentMode">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="ibZ-eW-OLI" kind="show" id="YpB-9p-dt3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6WE-ed-vdw">
+                                <rect key="frame" x="194" y="605" width="165" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="lGg-1k-ND3"/>
+                                </constraints>
+                                <state key="normal" image="Layer 11"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="self.imageView.contentMode">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="LK6-hR-alj" kind="show" id="bOK-05-3Ph"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -175,12 +208,16 @@
                             <constraint firstItem="vyo-hL-gqd" firstAttribute="leading" secondItem="Lzu-Ab-qi2" secondAttribute="trailing" constant="13" id="1dd-eh-8fZ"/>
                             <constraint firstItem="ltO-Nd-EkY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="2vy-wF-fPw"/>
                             <constraint firstItem="xpr-yc-E2z" firstAttribute="centerY" secondItem="NhT-u3-b5Q" secondAttribute="centerY" id="3cu-rr-18l"/>
+                            <constraint firstItem="FTw-c8-CHW" firstAttribute="width" secondItem="6WE-ed-vdw" secondAttribute="width" id="4Oe-2M-AZG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6WE-ed-vdw" secondAttribute="trailing" constant="16" id="8or-Zo-g6L"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZUQ-uW-1bI" secondAttribute="trailing" constant="16" id="ECm-Rv-uwH"/>
                             <constraint firstItem="uP5-4k-H4C" firstAttribute="centerY" secondItem="w0F-Bf-SKQ" secondAttribute="centerY" id="FJJ-ZJ-9SU"/>
                             <constraint firstItem="01J-8B-iTQ" firstAttribute="centerY" secondItem="lLv-pj-y6w" secondAttribute="centerY" id="FXd-fM-GJk"/>
                             <constraint firstItem="ltO-Nd-EkY" firstAttribute="width" secondItem="1CV-Ez-scj" secondAttribute="width" id="GBV-re-J5w"/>
                             <constraint firstItem="09b-Q9-FR4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="GPy-qV-FHV"/>
+                            <constraint firstItem="FTw-c8-CHW" firstAttribute="centerY" secondItem="6WE-ed-vdw" secondAttribute="centerY" id="Iok-rE-zCx"/>
                             <constraint firstItem="uP5-4k-H4C" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="KXh-zZ-hQ9"/>
+                            <constraint firstItem="6WE-ed-vdw" firstAttribute="leading" secondItem="FTw-c8-CHW" secondAttribute="trailing" constant="13" id="Ko2-cS-dfO"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xpr-yc-E2z" secondAttribute="trailing" constant="9" id="LnS-oA-dnh"/>
                             <constraint firstItem="w0F-Bf-SKQ" firstAttribute="top" secondItem="NhT-u3-b5Q" secondAttribute="bottom" constant="8.5" id="Mtf-c2-LRT"/>
                             <constraint firstItem="ltO-Nd-EkY" firstAttribute="centerY" secondItem="1CV-Ez-scj" secondAttribute="centerY" id="UIl-5O-Enl"/>
@@ -191,10 +228,12 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lLv-pj-y6w" secondAttribute="trailing" constant="16" id="d4z-BL-Ld6"/>
                             <constraint firstItem="01J-8B-iTQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="dDl-P7-dtX"/>
                             <constraint firstItem="1CV-Ez-scj" firstAttribute="top" secondItem="xpr-yc-E2z" secondAttribute="bottom" constant="8" id="iVp-ac-ctN"/>
+                            <constraint firstItem="6WE-ed-vdw" firstAttribute="top" secondItem="ZUQ-uW-1bI" secondAttribute="bottom" constant="8" id="isC-Ar-QaL"/>
                             <constraint firstItem="1CV-Ez-scj" firstAttribute="leading" secondItem="ltO-Nd-EkY" secondAttribute="trailing" constant="13" id="j5C-DF-OiC"/>
                             <constraint firstItem="09b-Q9-FR4" firstAttribute="centerY" secondItem="ZUQ-uW-1bI" secondAttribute="centerY" id="jsb-dR-0W7"/>
                             <constraint firstItem="lLv-pj-y6w" firstAttribute="leading" secondItem="01J-8B-iTQ" secondAttribute="trailing" constant="13" id="l1z-xy-kJB"/>
                             <constraint firstItem="Lzu-Ab-qi2" firstAttribute="centerY" secondItem="vyo-hL-gqd" secondAttribute="centerY" id="li6-A3-IeW"/>
+                            <constraint firstItem="FTw-c8-CHW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="mT1-xh-P17"/>
                             <constraint firstItem="NhT-u3-b5Q" firstAttribute="trailing" secondItem="w0F-Bf-SKQ" secondAttribute="trailing" id="nwJ-BO-deL"/>
                             <constraint firstItem="Lzu-Ab-qi2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="oQf-eh-hKU"/>
                             <constraint firstItem="Lzu-Ab-qi2" firstAttribute="width" secondItem="vyo-hL-gqd" secondAttribute="width" id="ofD-yJ-ccO"/>
@@ -234,7 +273,7 @@
         <scene sceneID="GFG-l5-PMJ">
             <objects>
                 <viewController id="RoE-0d-gah" customClass="DrawLineController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="srl-kn-hOI">
+                    <view key="view" contentMode="scaleToFill" id="srl-kn-hOI" customClass="NTMapView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -267,6 +306,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="P1H-H3-bo4"/>
                     </view>
+                    <connections>
+                        <outlet property="map" destination="srl-kn-hOI" id="f1N-jM-Oyl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hn5-Q7-hhk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -294,7 +336,7 @@
         <scene sceneID="sZK-AH-gGR">
             <objects>
                 <viewController id="vXW-Mp-aya" customClass="DrawPolygonController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Z40-V9-6JA">
+                    <view key="view" contentMode="scaleToFill" id="Z40-V9-6JA" customClass="NTMapView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -327,6 +369,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="mLA-G9-ICy"/>
                     </view>
+                    <connections>
+                        <outlet property="map" destination="Z40-V9-6JA" id="oOB-Kz-Hc5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TBP-Fc-ed5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -336,7 +381,7 @@
         <scene sceneID="EUS-l9-S0K">
             <objects>
                 <viewController id="2tb-GF-8A6" customClass="ChangeCameraTiltController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="FZi-aZ-xBw">
+                    <view key="view" contentMode="scaleToFill" id="FZi-aZ-xBw" customClass="NTMapView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -424,6 +469,7 @@
                         <viewLayoutGuide key="safeArea" id="eYv-Na-Wdb"/>
                     </view>
                     <connections>
+                        <outlet property="map" destination="FZi-aZ-xBw" id="8jL-WO-E3B"/>
                         <outlet property="tiltSlider" destination="35x-xG-dfw" id="FEJ-0M-ccu"/>
                     </connections>
                 </viewController>
@@ -435,7 +481,7 @@
         <scene sceneID="nKc-oI-GSr">
             <objects>
                 <viewController id="9bf-rX-qib" customClass="ChangeCameraBearingController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="GO3-Ri-1FS">
+                    <view key="view" contentMode="scaleToFill" id="GO3-Ri-1FS" customClass="NTMapView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -524,6 +570,7 @@
                     </view>
                     <connections>
                         <outlet property="bearingSlider" destination="BYr-VK-PEv" id="lRS-td-3Us"/>
+                        <outlet property="map" destination="GO3-Ri-1FS" id="yqw-Oq-OP0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="icm-d5-vd2" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -534,7 +581,7 @@
         <scene sceneID="DUv-BX-I0k">
             <objects>
                 <viewController id="tHj-Ej-v8h" customClass="ChangeStyleController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="GB9-8B-aWh">
+                    <view key="view" contentMode="scaleToFill" id="GB9-8B-aWh" customClass="NTMapView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -569,6 +616,7 @@
                         <viewLayoutGuide key="safeArea" id="ymS-H3-LHU"/>
                     </view>
                     <connections>
+                        <outlet property="map" destination="GB9-8B-aWh" id="0O2-aV-bt8"/>
                         <outlet property="themePreview" destination="wXR-P9-H2m" id="nGT-hH-h0V"/>
                     </connections>
                 </viewController>
@@ -580,7 +628,7 @@
         <scene sceneID="jQ1-GF-2HM">
             <objects>
                 <viewController id="Z91-MQ-Vem" customClass="UserLocationController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="7Fk-oa-EQ7">
+                    <view key="view" contentMode="scaleToFill" id="7Fk-oa-EQ7" customClass="NTMapView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -588,7 +636,7 @@
                                 <rect key="frame" x="309" y="597" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="FontAwesome" family="FontAwesome" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="FontAwesome" family="FontAwesome" pointSize="25"/>
                                 <state key="normal" title="">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -618,13 +666,213 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="HfX-18-Jav"/>
                     </view>
+                    <connections>
+                        <outlet property="map" destination="7Fk-oa-EQ7" id="LXH-Tn-U9N"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Che-s7-4kw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2886" y="-388"/>
         </scene>
+        <!--Traffic Layer Controller-->
+        <scene sceneID="Hov-mI-Qow">
+            <objects>
+                <viewController id="nhi-tv-De4" customClass="TrafficLayerController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NHZ-1V-yj4" customClass="NTMapView">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cdc-wp-WRH">
+                                <rect key="frame" x="104" y="601" width="167" height="46"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="لایه ترافیک" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dMH-Ob-TnN">
+                                        <rect key="frame" x="82" y="12" width="76" height="22"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES"/>
+                                        <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WGf-TR-NMk">
+                                        <rect key="frame" x="27" y="8" width="49" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <connections>
+                                            <action selector="toggleTrafficLayer:" destination="nhi-tv-De4" eventType="valueChanged" id="2QS-kl-cwq"/>
+                                        </connections>
+                                    </switch>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadius">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOpacity">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
+                                        <size key="value" width="2" height="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="BSC-7w-ZsB"/>
+                    </view>
+                    <connections>
+                        <outlet property="map" destination="NHZ-1V-yj4" id="vIG-HO-ajG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cB0-6v-oFq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2886" y="-1041"/>
+        </scene>
+        <!--Online Layer Controller-->
+        <scene sceneID="dt6-Bi-09R">
+            <objects>
+                <viewController id="ibZ-eW-OLI" customClass="OnlineLayerController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="029-04-2gM" customClass="NTMapView">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ur0-d4-0QW">
+                                <rect key="frame" x="104" y="601" width="167" height="46"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="لایه آنلاین" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t94-ft-FPl">
+                                        <rect key="frame" x="82" y="12" width="69" height="22"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES"/>
+                                        <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CCT-at-Be1">
+                                        <rect key="frame" x="27" y="8" width="49" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <connections>
+                                            <action selector="toggleOnlineLayer:" destination="ibZ-eW-OLI" eventType="valueChanged" id="k8P-HF-J8w"/>
+                                        </connections>
+                                    </switch>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadius">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOpacity">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
+                                        <size key="value" width="2" height="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="e3c-wd-SN7"/>
+                    </view>
+                    <connections>
+                        <outlet property="map" destination="029-04-2gM" id="3zM-q5-tMu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qKm-AJ-Vsj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3650" y="-1041"/>
+        </scene>
+        <!--Layer Controller-->
+        <scene sceneID="hiu-NL-tnN">
+            <objects>
+                <viewController id="LK6-hR-alj" customClass="POILayerController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qCp-vc-cgQ" customClass="NTMapView">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7rU-SL-8ae">
+                                <rect key="frame" x="259" y="567" width="100" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                <state key="normal" image="map_style_standard_day"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="self.imageView.contentMode">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadius">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOpacity">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
+                                        <size key="value" width="2" height="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="changeStyle:" destination="LK6-hR-alj" eventType="touchUpInside" id="U92-Ch-CEH"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t9u-YJ-CEI">
+                                <rect key="frame" x="16" y="601" width="167" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="لایه POI" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="plo-o7-dEl">
+                                        <rect key="frame" x="82" y="12" width="56" height="22"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES"/>
+                                        <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YEN-Tl-En0">
+                                        <rect key="frame" x="27" y="8" width="49" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <connections>
+                                            <action selector="togglePOILayer:" destination="LK6-hR-alj" eventType="valueChanged" id="kdz-dn-wAp"/>
+                                        </connections>
+                                    </switch>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadius">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOpacity">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
+                                        <size key="value" width="2" height="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="yZU-mj-3EQ"/>
+                    </view>
+                    <connections>
+                        <outlet property="map" destination="qCp-vc-cgQ" id="KbB-tR-hBP"/>
+                        <outlet property="themePreview" destination="7rU-SL-8ae" id="ykG-xU-PFr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xCG-h7-lRF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3649" y="-379"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="Layer 10" width="259" height="131"/>
+        <image name="Layer 11" width="259" height="131"/>
         <image name="Layer 2" width="259" height="131"/>
         <image name="Layer 3" width="259" height="131"/>
         <image name="Layer 4" width="259" height="131"/>

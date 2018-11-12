@@ -7,7 +7,6 @@
 //
 
 #import "DrawPolygonController.h"
-#import <NeshanMobileSDK/NeshanMobileSDK.h>
 
 @interface DrawPolygonController ()
 
@@ -16,9 +15,6 @@
 @implementation DrawPolygonController {
     // layer number in which map is added
     int BASE_MAP_INDEX;
-
-    // map UI element
-    NTMapView *map;
 
     // You can add some elements to a VectorElementLayer. We add polygons to this layer.
     NTVectorElementLayer *polygonLayer;
@@ -41,38 +37,22 @@
     [self initMap];
 }
 
-// We use findViewByID for every element in our layout file here
 -(void)initViews{
-    map = [NTMapView new];
-    map.translatesAutoresizingMaskIntoConstraints = NO;
-
-    [self.view insertSubview:map atIndex:0];
-    
-    [self.view addConstraints:[NSLayoutConstraint
-                               constraintsWithVisualFormat:@"H:|-0-[map]-0-|"
-                               options:NSLayoutFormatDirectionLeadingToTrailing
-                               metrics:nil
-                               views:NSDictionaryOfVariableBindings(map)]];
-    [self.view addConstraints:[NSLayoutConstraint
-                               constraintsWithVisualFormat:@"V:|-0-[map]-0-|"
-                               options:NSLayoutFormatDirectionLeadingToTrailing
-                               metrics:nil
-                               views:NSDictionaryOfVariableBindings(map)]];
 }
 
 // Initializing map
 -(void) initMap{
     // Creating a VectorElementLayer(called markerLayer) to add all markers to it and adding it to map's layers
     polygonLayer = [NTNeshanServices createVectorElementLayer];
-    [[map getLayers] add:polygonLayer];
+    [[self.map getLayers] add:polygonLayer];
     
     // add Standard_day map to layer BASE_MAP_INDEX
-    [[map getOptions] setZoomRange:[[NTRange alloc] initWithMin:4.5 max:18]];
-    [[map getLayers] insert:BASE_MAP_INDEX layer:[NTNeshanServices createBaseMap:NT_STANDARD_DAY]];
+    [[self.map getOptions] setZoomRange:[[NTRange alloc] initWithMin:4.5 max:18]];
+    [[self.map getLayers] insert:BASE_MAP_INDEX layer:[NTNeshanServices createBaseMap:NT_STANDARD_DAY]];
     
     // Setting map focal position to a fixed position and setting camera zoom
-    [map setFocalPointPosition: [[NTLngLat alloc] initWithX:51.330743 y:35.767234] durationSeconds:0];
-    [map setZoom:14 durationSeconds:0];
+    [self.map setFocalPointPosition: [[NTLngLat alloc] initWithX:51.330743 y:35.767234] durationSeconds:0];
+    [self.map setZoom:14 durationSeconds:0];
 }
 
 // Drawing polygon on map
@@ -92,8 +72,8 @@
     // adding the created polygon to polygonLayer, showing it on map
     [polygonLayer add:polygon];
     // focusing camera on first point of drawn polygon
-    [map setFocalPointPosition: [[NTLngLat alloc] initWithX:51.327650 y:35.769368] durationSeconds:0.25];
-    [map setZoom:14 durationSeconds:0];
+    [self.map setFocalPointPosition: [[NTLngLat alloc] initWithX:51.327650 y:35.769368] durationSeconds:0.25];
+    [self.map setZoom:14 durationSeconds:0];
 }
 
 - (IBAction)tiltSlider:(id)sender {
@@ -118,14 +98,5 @@
     return [lineStCr buildStyle];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

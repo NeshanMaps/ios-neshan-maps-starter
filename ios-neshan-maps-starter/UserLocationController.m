@@ -7,7 +7,7 @@
 //
 
 #import "UserLocationController.h"
-#import <NeshanMobileSDK/NeshanMobileSDK.h>
+#import "NeshanHelper.h"
 
 @interface UserLocationController ()
 
@@ -23,9 +23,6 @@
     // location updates will be received if another app is requesting the locations
     // than your app can handle
     #define FASTEST_UPDATE_INTERVAL_IN_MILLISECONDS 1000
-    
-    // map UI element
-    NTMapView *map;
     
     // You can add some elements to a VectorElementLayer
     NTVectorElementLayer *userMarkerLayer;
@@ -67,35 +64,7 @@
     [self initMap];
 }
 
--(void) toast:(NSString *)message {
-    
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil
-                                                                   message:message
-                                                            preferredStyle:UIAlertControllerStyleAlert];
-    
-    [self presentViewController:alert animated:YES completion:nil];
-    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 2 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
-        [alert dismissViewControllerAnimated:YES completion:nil];
-    });
-}
-// We use findViewByID for every element in our layout file here
 -(void)initViews{
-    map = [NTMapView new];
-    map.translatesAutoresizingMaskIntoConstraints = NO;
-    
-    [self.view insertSubview:map atIndex:0];
-    
-    [self.view addConstraints:[NSLayoutConstraint
-                               constraintsWithVisualFormat:@"H:|-0-[map]-0-|"
-                               options:NSLayoutFormatDirectionLeadingToTrailing
-                               metrics:nil
-                               views:NSDictionaryOfVariableBindings(map)]];
-    [self.view addConstraints:[NSLayoutConstraint
-                               constraintsWithVisualFormat:@"V:|-0-[map]-0-|"
-                               options:NSLayoutFormatDirectionLeadingToTrailing
-                               metrics:nil
-                               views:NSDictionaryOfVariableBindings(map)]];
 }
 
 // Initializing map
@@ -103,15 +72,15 @@
     
     // Creating a VectorElementLayer(called userMarkerLayer) to add user marker to it and adding it to map's layers
     userMarkerLayer = [NTNeshanServices createVectorElementLayer];
-    [[map getLayers] add:userMarkerLayer];
+    [[self.map getLayers] add:userMarkerLayer];
     
-    // add Standard_day map to layer BASE_MAP_INDEX
-    [[map getOptions] setZoomRange:[[NTRange alloc] initWithMin:4.5 max:18]];
-    [[map getLayers] insert:BASE_MAP_INDEX layer:[NTNeshanServices createBaseMap:NT_STANDARD_DAY]];
+    // add Standard_da_mapap to layer BASE_MAP_INDEX
+    [[self.map getOptions] setZoomRange:[[NTRange alloc] initWithMin:4.5 max:18]];
+    [[self.map getLayers] insert:BASE_MAP_INDEX layer:[NTNeshanServices createBaseMap:NT_STANDARD_DAY]];
     
     // Setting map focal position to a fixed position and setting camera zoom
-    [map setFocalPointPosition: [[NTLngLat alloc] initWithX:51.330743 y:35.767234] durationSeconds:0];
-    [map setZoom:14 durationSeconds:0];
+    [self.map setFocalPointPosition: [[NTLngLat alloc] initWithX:51.330743 y:35.767234] durationSeconds:0];
+    [self.map setZoom:14 durationSeconds:0];
 }
 
 -(void) initLocation{
@@ -129,7 +98,7 @@
 
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
 {
-    [self toast:@"عدم موفقیت در گرفتن مکان"];
+    [NeshanHelper toast:self message:@"عدم موفقیت در گرفتن مکان"];
 }
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)location fromLocation:(CLLocation *)oldLocation
@@ -186,9 +155,9 @@
 
 - (IBAction)focusOnUserLocation:(id)sender {
     if(userLocation != nil) {
-        [map setFocalPointPosition:
+        [self.map setFocalPointPosition:
          [[NTLngLat alloc] initWithX:userLocation.coordinate.longitude y:userLocation.coordinate.latitude] durationSeconds:0.25f];
-         [map setZoom:15 durationSeconds:.25];
+         [self.map setZoom:15 durationSeconds:.25];
     }
 }
 @end

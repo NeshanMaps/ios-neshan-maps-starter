@@ -123,12 +123,12 @@
 //         If a double click happens on a marker...
         if ([clickInfo getClickType] == NT_CLICK_TYPE_DOUBLE) {
             long removeId = [[[clickInfo getVectorElement] getMetaDataElement:@"id"] getLong];
-//            runOnUiThread(new Runnable() {
-//                @Override
-//                public void run() {
-//                    Toast.makeText(AddMarker.this, "نشانگر شماره " + removeId + " حذف شد!", Toast.LENGTH_SHORT).show();
-//                }
-//            });
+
+            // updating own ui element must run on ui thread not in map ui thread
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [NeshanHelper toast:self message:[NSString stringWithFormat:@"%@ %ld %@", @"نشانگر شماره", removeId, @"حذف شد!"]];
+            });
+
             //getting marker reference from clickInfo and remove that marker from markerLayer
             [markerLayer remove:[clickInfo getVectorElement]];
 

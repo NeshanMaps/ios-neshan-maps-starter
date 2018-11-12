@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		031487062199490E0071A593 /* TrafficLayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 031487052199490E0071A593 /* TrafficLayerController.m */; };
+		0314870921995F060071A593 /* OnlineLayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0314870821995F060071A593 /* OnlineLayerController.m */; };
+		0314870C219970C30071A593 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 0314870B219970C20071A593 /* Reachability.m */; };
+		0314870F2199A1330071A593 /* POILayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0314870E2199A1330071A593 /* POILayerController.m */; };
 		03619AF92198324E00DEFADB /* UserLocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03619AF82198324E00DEFADB /* UserLocationController.m */; };
 		03619AFB219834EE00DEFADB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03619AFA219834ED00DEFADB /* CoreLocation.framework */; };
 		03704F062191978C00AEEB64 /* DrawLineController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03704F052191978C00AEEB64 /* DrawLineController.m */; };
@@ -30,6 +34,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		031487042199490E0071A593 /* TrafficLayerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrafficLayerController.h; sourceTree = "<group>"; };
+		031487052199490E0071A593 /* TrafficLayerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrafficLayerController.m; sourceTree = "<group>"; };
+		0314870721995F060071A593 /* OnlineLayerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OnlineLayerController.h; sourceTree = "<group>"; };
+		0314870821995F060071A593 /* OnlineLayerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OnlineLayerController.m; sourceTree = "<group>"; };
+		0314870A219970090071A593 /* Reachability.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		0314870B219970C20071A593 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		0314870D2199A1330071A593 /* POILayerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = POILayerController.h; sourceTree = "<group>"; };
+		0314870E2199A1330071A593 /* POILayerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = POILayerController.m; sourceTree = "<group>"; };
 		03619AF72198324E00DEFADB /* UserLocationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserLocationController.h; sourceTree = "<group>"; };
 		03619AF82198324E00DEFADB /* UserLocationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserLocationController.m; sourceTree = "<group>"; };
 		03619AFA219834ED00DEFADB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -121,6 +133,8 @@
 				03F6936F218F02B200A252AA /* LaunchScreen.storyboard */,
 				03F69372218F02B200A252AA /* Info.plist */,
 				03F69373218F02B200A252AA /* main.m */,
+				0314870A219970090071A593 /* Reachability.h */,
+				0314870B219970C20071A593 /* Reachability.m */,
 				03704F072191980E00AEEB64 /* NeshanHelper.h */,
 				03704F082191980E00AEEB64 /* NeshanHelper.m */,
 				03DA1C9C2190485A0015E08E /* AddMarkerController.h */,
@@ -137,6 +151,12 @@
 				03BF1FBB219701330095BB69 /* ChangeStyleController.m */,
 				03619AF72198324E00DEFADB /* UserLocationController.h */,
 				03619AF82198324E00DEFADB /* UserLocationController.m */,
+				031487042199490E0071A593 /* TrafficLayerController.h */,
+				031487052199490E0071A593 /* TrafficLayerController.m */,
+				0314870721995F060071A593 /* OnlineLayerController.h */,
+				0314870821995F060071A593 /* OnlineLayerController.m */,
+				0314870D2199A1330071A593 /* POILayerController.h */,
+				0314870E2199A1330071A593 /* POILayerController.m */,
 			);
 			path = "ios-neshan-maps-starter";
 			sourceTree = "<group>";
@@ -262,11 +282,15 @@
 				03704F092191980E00AEEB64 /* NeshanHelper.m in Sources */,
 				03BF1FB92196FA310095BB69 /* ChangeCameraBearingController.m in Sources */,
 				03F69369218F02B000A252AA /* ViewController.m in Sources */,
+				031487062199490E0071A593 /* TrafficLayerController.m in Sources */,
 				03F69374218F02B200A252AA /* main.m in Sources */,
+				0314870F2199A1330071A593 /* POILayerController.m in Sources */,
 				03F69366218F02B000A252AA /* AppDelegate.m in Sources */,
 				03BF1FBC219701330095BB69 /* ChangeStyleController.m in Sources */,
 				03619AF92198324E00DEFADB /* UserLocationController.m in Sources */,
 				03DA1C9E2190485A0015E08E /* AddMarkerController.m in Sources */,
+				0314870921995F060071A593 /* OnlineLayerController.m in Sources */,
+				0314870C219970C30071A593 /* Reachability.m in Sources */,
 				03704F062191978C00AEEB64 /* DrawLineController.m in Sources */,
 				03BF1FB32196AEF50095BB69 /* DrawPolygonController.m in Sources */,
 				03BF1FB62196CC450095BB69 /* ChangeCameraTiltController.m in Sources */,

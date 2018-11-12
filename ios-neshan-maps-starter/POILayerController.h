@@ -1,8 +1,8 @@
 //
-//  ChangeStyleController.h
+//  POILayerController.h
 //  ios-neshan-maps-starter
 //
-//  Created by hamid on 11/10/18.
+//  Created by hamid on 11/12/18.
 //  Copyright © 2018 Razhman. All rights reserved.
 //
 
@@ -11,12 +11,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ChangeStyleController : UIViewController
+@interface POILayerController : UIViewController
 
 @property (strong, nonatomic) IBOutlet NTMapView *map;
-
 @property (weak, nonatomic) IBOutlet UIButton *themePreview;
 - (IBAction)changeStyle:(id)sender;
+- (IBAction)togglePOILayer:(id)sender;
 
 @end
 

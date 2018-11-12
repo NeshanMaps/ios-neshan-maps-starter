@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <NeshanMobileSDK/NeshanMobileSDK.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ChangeCameraTiltController : UIViewController
+@property (strong, nonatomic) IBOutlet NTMapView *map;
 @property (weak, nonatomic) IBOutlet UISlider *tiltSlider;
 - (IBAction)sliderChanged:(id)sender;
 
