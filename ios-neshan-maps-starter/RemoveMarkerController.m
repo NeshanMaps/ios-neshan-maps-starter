@@ -1,20 +1,20 @@
 //
-//  AddMarkerController.m
+//  RemoveMarkerController.m
 //  ios-neshan-maps-starter
 //
 //  Created by hamid on 11/5/18.
 //  Copyright © 2018 Razhman. All rights reserved.
 //
 
-#import "AddMarkerController.h"
+#import "RemoveMarkerController.h"
 #import <NeshanMobileSDK/NeshanMobileSDK.h>
 #import "NeshanHelper.h"
 
-@interface AddMarkerController ()
+@interface RemoveMarkerController ()
 
 @end
 
-@implementation AddMarkerController {
+@implementation RemoveMarkerController {
     // layer number in which map is added
     int BASE_MAP_INDEX;
 
@@ -28,6 +28,12 @@
     long markerId;
     // marker animation style
     NTAnimationStyle *animSt;
+
+    // save selected Marker for select and deselect function
+    NTMarker *selectedMarker;
+    // Tip Strings
+    NSString *firstTipString;
+    NSString *secondTipString;
 }
 
 - (void)viewDidLoad {
@@ -35,7 +41,10 @@
 
     BASE_MAP_INDEX = 0;
     markerId = 0;
-    
+    selectedMarker = nil;
+    firstTipString = @"<b>قدم اول:</b> برای ایجاد پین جدید نگهدارید!";
+    secondTipString = @"<b>قدم دوم:</b> برای حذف روی پین لمس کنید!";
+
     map = [NTMapView new];
 
     // Creating a VectorElementLayer(called markerLayer) to add all markers to it and adding it to map's layers
@@ -65,7 +74,7 @@
         if ([clickInfo getClickType] == NT_CLICK_TYPE_LONG) {
             // by calling getClickPos(), we can get position of clicking (or tapping)
             NTLngLat *clickedLocation = [clickInfo getClickPos];
-            // addMarker adds a marker (pretty self explanatory :D) to the clicked location
+            // removeMarker adds a marker (pretty self explanatory :D) to the clicked location
             [self addMarker:clickedLocation withId:markerId];
             // increment id
             markerId++;
@@ -93,7 +102,7 @@
     // Creating marker style. We should use an object of type MarkerStyleCreator, set all features on it
     // and then call buildStyle method on it. This method returns an object of type MarkerStyle
     NTMarkerStyleCreator *markStCr = [NTMarkerStyleCreator new];
-    [markStCr setSize:20];
+    [markStCr setSize:30];
 
     [markStCr setBitmap:[NTBitmapUtils createBitmapFromUIImage:[UIImage imageNamed:@"ic_marker"]]];
     // AnimationStyle object - that was created before - is used here
@@ -139,16 +148,43 @@
 {
     // create new marker style
     NTMarkerStyleCreator *markStCr = [NTMarkerStyleCreator new];
-    [markStCr setSize:20];
+    [markStCr setSize:30];
     // Setting a new bitmap as marker
     [markStCr setBitmap:[NTBitmapUtils createBitmapFromUIImage:[UIImage imageNamed:@"ic_marker_blue"]]];
     // AnimationStyle object - that was created before - is used here
     [markStCr setAnimationStyle:animSt];
-
+    
     NTMarkerStyle *blueMarkSt = [markStCr buildStyle];
     
     // changing marker style using setStyle
     [redMarker setStyle:blueMarkSt];
+}
+
+-(void) changeMarkerToRed:(NTMarker *)blueMarker
+{
+    // create new marker style
+    NTMarkerStyleCreator *markStCr = [NTMarkerStyleCreator new];
+    [markStCr setSize:30];
+    // Setting a new bitmap as marker
+    [markStCr setBitmap:[NTBitmapUtils createBitmapFromUIImage:[UIImage imageNamed:@"ic_marker_blue"]]];
+    // AnimationStyle object - that was created before - is used here
+    [markStCr setAnimationStyle:animSt];
+    
+    NTMarkerStyle *redMarkSt = [markStCr buildStyle];
+    
+    // changing marker style using setStyle
+    [blueMarker setStyle:redMarkSt];
+}
+
+// deselect marker and collapsing bottom sheet
+-(void) deselectMarker:(NTMarker *)deselectMarker {
+    [self changeMarkerToBlue:deselectMarker];
+    selectedMarker = nil;
+}
+// select marker and expanding bottom sheet
+-(void) selectMarker:(NTMarker *)selectMarker {
+    [self changeMarkerToRed:selectMarker];
+    selectedMarker = selectMarker;
 }
 
 @end

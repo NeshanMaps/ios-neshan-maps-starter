@@ -8,6 +8,23 @@
 
 #import "NeshanHelper.h"
 
+@implementation NeshanHelper
+
++(void) toast:(UIViewController *)parent message:(NSString *)message{
+    
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil
+                                                                   message:message
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+    
+    [parent presentViewController:alert animated:YES completion:nil];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 2 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+        [alert dismissViewControllerAnimated:YES completion:nil];
+    });
+}
+
+@end
+
 @implementation VectorElementClickedListener
 
 -(BOOL)onVectorElementClicked: (NTElementClickData*)clickInfo
@@ -34,19 +51,3 @@
 
 @end
 
-@implementation NeshanHelper
-
-+(void) toast:(UIViewController *)parent message:(NSString *)message{
-    
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil
-                                                                   message:message
-                                                            preferredStyle:UIAlertControllerStyleAlert];
-    
-    [parent presentViewController:alert animated:YES completion:nil];
-    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 2 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
-        [alert dismissViewControllerAnimated:YES completion:nil];
-    });
-}
-
-@end

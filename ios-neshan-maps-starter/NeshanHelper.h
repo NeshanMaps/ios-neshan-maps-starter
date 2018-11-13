@@ -11,6 +11,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+#define API_KEY @"service.fYFAjXz8Ua8BNbkReNJr66AB9qFTYYfdWUNfSnoM"
+
+@interface NeshanHelper: NSObject
++(void) toast:(UIViewController *)parent message:(NSString *)message;
+@end
 
 @interface VectorElementClickedListener: NTVectorElementEventListener
 
@@ -27,10 +32,6 @@ typedef void (^OnMapClickedBlock)(NTClickData* clickInfo);
 typedef void (^OnMapMovedBlock)(void);
 @property (readwrite, copy) OnMapMovedBlock onMapMovedBlock;
 
-@end
-
-@interface NeshanHelper: NSObject
-+(void) toast:(UIViewController *)parent message:(NSString *)message;
 @end
 
 NS_ASSUME_NONNULL_END

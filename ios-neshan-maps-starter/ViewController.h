@@ -12,5 +12,9 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *version;
 
+- (IBAction)siteClicked:(id)sender;
+- (IBAction)sourceCodeClicked:(id)sender;
+- (IBAction)test:(id)sender;
+
 @end
 

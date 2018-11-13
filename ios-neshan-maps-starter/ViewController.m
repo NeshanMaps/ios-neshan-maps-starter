@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import <NeshanMobileSDK/NeshanMobileSDK.h>
+#import "DrawLineController.h"
 
 @interface ViewController ()
 
@@ -36,4 +37,22 @@
 }
 
 
+- (IBAction)siteClicked:(id)sender {
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://developer.neshan.org/"]];
+}
+
+- (IBAction)sourceCodeClicked:(id)sender {
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://github.com/NeshanMaps/ios-neshan-maps-starter"]];
+
+}
+
+- (IBAction)test:(id)sender {
+    
+    UIViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"DrawLineController"];
+    [self presentViewController:vc animated:YES completion:nil];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [vc dismissViewControllerAnimated:YES completion:nil];
+    });
+}
 @end
