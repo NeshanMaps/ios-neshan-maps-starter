@@ -11,6 +11,9 @@
 		0314870921995F060071A593 /* OnlineLayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0314870821995F060071A593 /* OnlineLayerController.m */; };
 		0314870C219970C30071A593 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 0314870B219970C20071A593 /* Reachability.m */; };
 		0314870F2199A1330071A593 /* POILayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0314870E2199A1330071A593 /* POILayerController.m */; };
+		034349D3219C4429004F0FE4 /* DatabaseLayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 034349D2219C4428004F0FE4 /* DatabaseLayerController.m */; };
+		034349D5219C612E004F0FE4 /* libFMDB.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 034349D4219C612E004F0FE4 /* libFMDB.a */; };
+		034349D7219C7545004F0FE4 /* database.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 034349D6219C6244004F0FE4 /* database.sqlite */; };
 		03581648219AE2D20054A312 /* APIAFNetworkingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03581647219AE2D20054A312 /* APIAFNetworkingController.m */; };
 		0358164A219AFB2A0054A312 /* libAFNetworking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03581649219AFB2A0054A312 /* libAFNetworking.a */; };
 		0358164D219B0F860054A312 /* APIURLSessionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0358164B219B0F860054A312 /* APIURLSessionController.m */; };
@@ -47,6 +50,10 @@
 		0314870B219970C20071A593 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		0314870D2199A1330071A593 /* POILayerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = POILayerController.h; sourceTree = "<group>"; };
 		0314870E2199A1330071A593 /* POILayerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = POILayerController.m; sourceTree = "<group>"; };
+		034349D1219C4428004F0FE4 /* DatabaseLayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseLayerController.h; sourceTree = "<group>"; };
+		034349D2219C4428004F0FE4 /* DatabaseLayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseLayerController.m; sourceTree = "<group>"; };
+		034349D4219C612E004F0FE4 /* libFMDB.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFMDB.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		034349D6219C6244004F0FE4 /* database.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = database.sqlite; sourceTree = "<group>"; };
 		03581646219AE2D20054A312 /* APIAFNetworkingController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIAFNetworkingController.h; sourceTree = "<group>"; };
 		03581647219AE2D20054A312 /* APIAFNetworkingController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APIAFNetworkingController.m; sourceTree = "<group>"; };
 		03581649219AFB2A0054A312 /* libAFNetworking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libAFNetworking.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				034349D5219C612E004F0FE4 /* libFMDB.a in Frameworks */,
 				0358164A219AFB2A0054A312 /* libAFNetworking.a in Frameworks */,
 				03619AFB219834EE00DEFADB /* CoreLocation.framework in Frameworks */,
 				7E064BA532EE2CE0E2A6F9A6 /* libPods-ios-neshan-maps-starter.a in Frameworks */,
@@ -120,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				03C856F2218F0A380084CE4B /* neshan.license */,
+				034349D6219C6244004F0FE4 /* database.sqlite */,
 				03F69363218F02B000A252AA /* ios-neshan-maps-starter */,
 				03F69362218F02B000A252AA /* Products */,
 				DF9121A9B19E804BC396F76D /* Pods */,
@@ -180,6 +189,8 @@
 				03581652219B1A180054A312 /* AddLabelController.m */,
 				03581654219B1A190054A312 /* RemoveMarkerController.h */,
 				03581651219B1A180054A312 /* RemoveMarkerController.m */,
+				034349D1219C4428004F0FE4 /* DatabaseLayerController.h */,
+				034349D2219C4428004F0FE4 /* DatabaseLayerController.m */,
 			);
 			path = "ios-neshan-maps-starter";
 			sourceTree = "<group>";
@@ -187,6 +198,7 @@
 		2171D23C68FFA5172F0FF96E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				034349D4219C612E004F0FE4 /* libFMDB.a */,
 				03581649219AFB2A0054A312 /* libAFNetworking.a */,
 				03619AFA219834ED00DEFADB /* CoreLocation.framework */,
 				8D8FA95942854AB082D5D0D1 /* libPods-ios-neshan-maps-starter.a */,
@@ -261,6 +273,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				034349D7219C7545004F0FE4 /* database.sqlite in Resources */,
 				03C856F3218F0A380084CE4B /* neshan.license in Resources */,
 				03C856FA218F14D50084CE4B /* IRANSansMobile.ttf in Resources */,
 				03F69371218F02B200A252AA /* LaunchScreen.storyboard in Resources */,
@@ -321,6 +334,7 @@
 				0314870C219970C30071A593 /* Reachability.m in Sources */,
 				03704F062191978C00AEEB64 /* DrawLineController.m in Sources */,
 				03BF1FB32196AEF50095BB69 /* DrawPolygonController.m in Sources */,
+				034349D3219C4429004F0FE4 /* DatabaseLayerController.m in Sources */,
 				03BF1FB62196CC450095BB69 /* ChangeCameraTiltController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

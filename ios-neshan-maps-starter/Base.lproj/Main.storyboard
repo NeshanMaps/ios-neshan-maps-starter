@@ -32,22 +32,18 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UQK-Mm-E7S">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cew-BK-cKI">
-                                                <rect key="frame" x="194" y="335" width="166" height="90"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="166" id="7dP-uJ-uB3"/>
-                                                    <constraint firstAttribute="height" constant="90" id="rPY-np-HyZ"/>
-                                                </constraints>
-                                                <state key="normal" image="Layer 7"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="self.imageView.contentMode">
-                                                        <integer key="value" value="1"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <segue destination="tHj-Ej-v8h" kind="show" id="lDm-QB-9cN"/>
-                                                </connections>
-                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="نشان" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z5s-Iz-6p2">
+                                                <rect key="frame" x="17" y="50.5" width="231" height="28"/>
+                                                <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="22"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="نسخه 1.0.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0zN-L0-En2">
+                                                <rect key="frame" x="17" y="88.5" width="49" height="13"/>
+                                                <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="10"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_neshan_logo" translatesAutoresizingMaskIntoConstraints="NO" id="phY-B2-i5g">
                                                 <rect key="frame" x="250" y="-1" width="110" height="131"/>
                                                 <constraints>
@@ -55,11 +51,17 @@
                                                     <constraint firstAttribute="width" constant="110" id="mrJ-N2-LwH"/>
                                                 </constraints>
                                             </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="زیرساخت توسعه‌ی نقشه" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XVW-MO-Wg5">
+                                                <rect key="frame" x="121.5" y="87" width="126.5" height="16"/>
+                                                <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="13"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="63Q-hg-8Gs">
-                                                <rect key="frame" x="194" y="531" width="166" height="90"/>
+                                                <rect key="frame" x="194" y="531" width="165" height="90"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="166" id="A42-JG-eSA"/>
-                                                    <constraint firstAttribute="height" constant="90" id="L2H-Ob-oqf"/>
+                                                    <constraint firstAttribute="height" constant="90" id="192-Qe-NSu"/>
+                                                    <constraint firstAttribute="width" constant="165" id="3M6-5n-a8X"/>
                                                 </constraints>
                                                 <state key="normal" image="Layer 11"/>
                                                 <userDefinedRuntimeAttributes>
@@ -71,17 +73,27 @@
                                                     <segue destination="LK6-hR-alj" kind="show" id="Mxc-4F-k5n"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="نشان" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z5s-Iz-6p2">
-                                                <rect key="frame" x="17" y="50.5" width="231" height="28"/>
-                                                <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="22"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a9c-Er-yfA">
-                                                <rect key="frame" x="194" y="139" width="166" height="90"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cew-BK-cKI">
+                                                <rect key="frame" x="194" y="335" width="165" height="90"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="90" id="crC-Gi-MJm"/>
-                                                    <constraint firstAttribute="width" constant="166" id="nTo-aB-8e8"/>
+                                                    <constraint firstAttribute="height" constant="90" id="qja-Ff-LOP"/>
+                                                    <constraint firstAttribute="width" constant="165" id="woh-EN-hV0"/>
+                                                </constraints>
+                                                <state key="normal" image="Layer 7"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="self.imageView.contentMode">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <segue destination="tHj-Ej-v8h" kind="show" id="lDm-QB-9cN"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a9c-Er-yfA">
+                                                <rect key="frame" x="194" y="139" width="165" height="90"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="165" id="YjQ-xG-Cqr"/>
+                                                    <constraint firstAttribute="height" constant="90" id="kot-kE-XhG"/>
                                                 </constraints>
                                                 <state key="normal" image="Layer 3"/>
                                                 <userDefinedRuntimeAttributes>
@@ -94,10 +106,10 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="crS-1p-If6">
-                                                <rect key="frame" x="16" y="531" width="166" height="90"/>
+                                                <rect key="frame" x="16" y="531" width="165" height="90"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="90" id="9B2-wi-pRz"/>
-                                                    <constraint firstAttribute="width" constant="166" id="qmp-42-VGt"/>
+                                                    <constraint firstAttribute="width" constant="165" id="K8A-xC-hMj"/>
+                                                    <constraint firstAttribute="height" constant="90" id="YPu-re-QvX"/>
                                                 </constraints>
                                                 <state key="normal" image="Layer 10"/>
                                                 <userDefinedRuntimeAttributes>
@@ -110,10 +122,10 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S99-HH-txG">
-                                                <rect key="frame" x="194" y="629" width="164" height="90"/>
+                                                <rect key="frame" x="194" y="629" width="165" height="90"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="90" id="TZ7-My-bk7"/>
-                                                    <constraint firstAttribute="width" constant="164" id="ju8-KR-w5O"/>
+                                                    <constraint firstAttribute="width" constant="165" id="3yA-Wt-lUk"/>
+                                                    <constraint firstAttribute="height" constant="90" id="j4D-M8-9MI"/>
                                                 </constraints>
                                                 <state key="normal" image="Layer 13"/>
                                                 <userDefinedRuntimeAttributes>
@@ -125,11 +137,11 @@
                                                     <segue destination="tRr-aI-fhM" kind="show" id="JbM-mj-ssb"/>
                                                 </connections>
                                             </button>
-                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tm8-Rg-e46">
-                                                <rect key="frame" x="16" y="629" width="164" height="90"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tm8-Rg-e46">
+                                                <rect key="frame" x="16" y="629" width="165" height="90"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="164" id="88A-AV-cAA"/>
-                                                    <constraint firstAttribute="height" constant="90" id="zCm-Yl-vty"/>
+                                                    <constraint firstAttribute="width" constant="165" id="Fa9-Js-n5I"/>
+                                                    <constraint firstAttribute="height" constant="90" id="j1h-OU-Uod"/>
                                                 </constraints>
                                                 <state key="normal" image="Layer 12"/>
                                                 <userDefinedRuntimeAttributes>
@@ -137,12 +149,15 @@
                                                         <integer key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <segue destination="9pM-LT-RiH" kind="show" id="ThB-iW-qNF"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V0t-gX-B2n">
-                                                <rect key="frame" x="16" y="727" width="166" height="90"/>
+                                                <rect key="frame" x="16" y="727" width="165" height="90"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="90" id="1Jt-Pu-gQZ"/>
-                                                    <constraint firstAttribute="width" constant="166" id="ghP-I6-lJh"/>
+                                                    <constraint firstAttribute="width" constant="165" id="3f4-Pz-4oA"/>
+                                                    <constraint firstAttribute="height" constant="90" id="HK9-mk-OMR"/>
                                                 </constraints>
                                                 <state key="normal" image="Layer 14"/>
                                                 <userDefinedRuntimeAttributes>
@@ -155,10 +170,10 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hn9-cG-SfM">
-                                                <rect key="frame" x="16" y="139" width="166" height="90"/>
+                                                <rect key="frame" x="16" y="139" width="165" height="90"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="166" id="XGv-mL-4lz"/>
-                                                    <constraint firstAttribute="height" constant="90" id="s37-DR-32N"/>
+                                                    <constraint firstAttribute="width" constant="165" id="qTc-Sc-k97"/>
+                                                    <constraint firstAttribute="height" constant="90" id="wjF-jw-m79"/>
                                                 </constraints>
                                                 <state key="normal" image="Layer 2"/>
                                                 <userDefinedRuntimeAttributes>
@@ -170,17 +185,11 @@
                                                     <segue destination="eN4-8S-ozV" kind="show" id="YN5-PV-fSf"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="نسخه 1.0.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0zN-L0-En2">
-                                                <rect key="frame" x="17" y="88.5" width="49" height="13"/>
-                                                <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="10"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F7H-ue-D4t">
-                                                <rect key="frame" x="194" y="433" width="166" height="90"/>
+                                                <rect key="frame" x="194" y="433" width="165" height="90"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="90" id="8sX-3e-y8Z"/>
-                                                    <constraint firstAttribute="width" constant="166" id="CGH-Lq-g8K"/>
+                                                    <constraint firstAttribute="width" constant="165" id="Fea-Or-Mvi"/>
+                                                    <constraint firstAttribute="height" constant="90" id="HGR-Ab-qPm"/>
                                                 </constraints>
                                                 <state key="normal" image="Layer 9"/>
                                                 <userDefinedRuntimeAttributes>
@@ -193,10 +202,10 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bjm-Fb-yvZ">
-                                                <rect key="frame" x="16" y="433" width="166" height="90"/>
+                                                <rect key="frame" x="16" y="433" width="165" height="90"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="90" id="FwG-5P-cDC"/>
-                                                    <constraint firstAttribute="width" constant="166" id="zfv-DU-5zo"/>
+                                                    <constraint firstAttribute="width" constant="165" id="DqS-7E-yPK"/>
+                                                    <constraint firstAttribute="height" constant="90" id="klO-ia-ZNc"/>
                                                 </constraints>
                                                 <state key="normal" image="Layer 8"/>
                                                 <userDefinedRuntimeAttributes>
@@ -208,17 +217,11 @@
                                                     <segue destination="Z91-MQ-Vem" kind="show" id="Jd3-1u-9dZ"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="زیرساخت توسعه‌ی نقشه" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XVW-MO-Wg5">
-                                                <rect key="frame" x="121.5" y="87" width="126.5" height="16"/>
-                                                <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="13"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0jh-5G-Tgs">
-                                                <rect key="frame" x="16" y="335" width="166" height="90"/>
+                                                <rect key="frame" x="16" y="335" width="165" height="90"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="166" id="nlM-u7-ajK"/>
-                                                    <constraint firstAttribute="height" constant="90" id="zqf-MO-reV"/>
+                                                    <constraint firstAttribute="height" constant="90" id="GCi-HG-7ck"/>
+                                                    <constraint firstAttribute="width" constant="165" id="bd4-LB-V5n"/>
                                                 </constraints>
                                                 <state key="normal" image="Layer 6"/>
                                                 <userDefinedRuntimeAttributes>
@@ -231,10 +234,10 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vea-Li-a0J">
-                                                <rect key="frame" x="194" y="237" width="166" height="90"/>
+                                                <rect key="frame" x="194" y="237" width="165" height="90"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="90" id="7jC-Mb-00P"/>
-                                                    <constraint firstAttribute="width" constant="166" id="rtK-eW-dRT"/>
+                                                    <constraint firstAttribute="height" constant="90" id="4fN-cc-Mqj"/>
+                                                    <constraint firstAttribute="width" constant="165" id="J2T-oC-YtN"/>
                                                 </constraints>
                                                 <state key="normal" image="Layer 5"/>
                                                 <userDefinedRuntimeAttributes>
@@ -247,10 +250,10 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cIE-iC-ONS">
-                                                <rect key="frame" x="16" y="237" width="166" height="90"/>
+                                                <rect key="frame" x="16" y="237" width="165" height="90"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="90" id="Kuq-RR-hMQ"/>
-                                                    <constraint firstAttribute="width" constant="166" id="djI-ds-edD"/>
+                                                    <constraint firstAttribute="height" constant="90" id="gJa-1I-wOR"/>
+                                                    <constraint firstAttribute="width" constant="165" id="hwO-C7-75w"/>
                                                 </constraints>
                                                 <state key="normal" image="Layer 4"/>
                                                 <userDefinedRuntimeAttributes>
@@ -262,11 +265,11 @@
                                                     <segue destination="vXW-Mp-aya" kind="show" id="ZER-vM-ebT"/>
                                                 </connections>
                                             </button>
-                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DdT-uH-eYD">
-                                                <rect key="frame" x="194" y="825" width="166" height="90"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DdT-uH-eYD">
+                                                <rect key="frame" x="194" y="825" width="165" height="90"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="90" id="I1F-bk-fMs"/>
-                                                    <constraint firstAttribute="width" constant="166" id="LH3-Cf-tfT"/>
+                                                    <constraint firstAttribute="height" constant="90" id="FzX-HI-1sV"/>
+                                                    <constraint firstAttribute="width" constant="165" id="bVF-xM-M13"/>
                                                 </constraints>
                                                 <state key="normal" image="Layer 18"/>
                                                 <userDefinedRuntimeAttributes>
@@ -278,20 +281,20 @@
                                                     <segue destination="n2g-5X-Qo6" kind="show" id="xff-Bf-xpy"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Im5-pD-QRb">
-                                                <rect key="frame" x="8" y="961" width="166" height="39"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="33C-2q-AHe">
+                                                <rect key="frame" x="194" y="727" width="165" height="90"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="166" id="R4d-gi-eAb"/>
-                                                    <constraint firstAttribute="height" constant="39" id="glg-OQ-ttW"/>
+                                                    <constraint firstAttribute="height" constant="90" id="iqf-6A-ULv"/>
+                                                    <constraint firstAttribute="width" constant="165" id="zmL-xm-Tbx"/>
                                                 </constraints>
-                                                <state key="normal" image="Layer 20"/>
+                                                <state key="normal" image="Layer 17"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="self.imageView.contentMode">
                                                         <integer key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="siteClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4ez-RZ-Pu5"/>
+                                                    <segue destination="2N8-Pe-HDE" kind="show" id="1FT-kC-DXu"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4fs-AY-STh">
@@ -310,79 +313,71 @@
                                                     <action selector="sourceCodeClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nle-N6-Szi"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="33C-2q-AHe">
-                                                <rect key="frame" x="194" y="727" width="166" height="90"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Im5-pD-QRb">
+                                                <rect key="frame" x="8" y="961" width="166" height="39"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="166" id="Q5a-tY-tbt"/>
-                                                    <constraint firstAttribute="height" constant="90" id="vBi-10-Pck"/>
+                                                    <constraint firstAttribute="width" constant="166" id="R4d-gi-eAb"/>
+                                                    <constraint firstAttribute="height" constant="39" id="glg-OQ-ttW"/>
                                                 </constraints>
-                                                <state key="normal" image="Layer 17"/>
+                                                <state key="normal" image="Layer 20"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="self.imageView.contentMode">
                                                         <integer key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <segue destination="2N8-Pe-HDE" kind="show" id="1FT-kC-DXu"/>
+                                                    <action selector="siteClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4ez-RZ-Pu5"/>
                                                 </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="Z5s-Iz-6p2" firstAttribute="centerY" secondItem="phY-B2-i5g" secondAttribute="centerY" id="0L7-n9-BE7"/>
-                                            <constraint firstAttribute="trailing" secondItem="a9c-Er-yfA" secondAttribute="trailing" constant="15" id="0um-gr-DXE"/>
                                             <constraint firstAttribute="height" constant="1000" id="2RU-OO-cQZ"/>
-                                            <constraint firstItem="crS-1p-If6" firstAttribute="leading" secondItem="UQK-Mm-E7S" secondAttribute="leading" constant="16" id="3CY-lK-FNd"/>
-                                            <constraint firstItem="Bjm-Fb-yvZ" firstAttribute="leading" secondItem="UQK-Mm-E7S" secondAttribute="leading" constant="16" id="3Iw-Xy-FJs"/>
-                                            <constraint firstItem="F7H-ue-D4t" firstAttribute="top" secondItem="cew-BK-cKI" secondAttribute="bottom" constant="8" id="3ov-uR-80Z"/>
-                                            <constraint firstItem="cIE-iC-ONS" firstAttribute="leading" secondItem="UQK-Mm-E7S" secondAttribute="leading" constant="16" id="4YE-g4-RNH"/>
-                                            <constraint firstItem="cew-BK-cKI" firstAttribute="leading" secondItem="0jh-5G-Tgs" secondAttribute="trailing" constant="12" id="5K7-gz-2Tr"/>
                                             <constraint firstItem="0zN-L0-En2" firstAttribute="leading" secondItem="UQK-Mm-E7S" secondAttribute="leading" constant="17" id="5ct-gj-TvL"/>
                                             <constraint firstItem="phY-B2-i5g" firstAttribute="leading" secondItem="Z5s-Iz-6p2" secondAttribute="trailing" constant="2" id="5ii-WK-aAi"/>
-                                            <constraint firstItem="crS-1p-If6" firstAttribute="top" secondItem="Bjm-Fb-yvZ" secondAttribute="bottom" constant="8" id="6It-B7-vdQ"/>
-                                            <constraint firstItem="vea-Li-a0J" firstAttribute="top" secondItem="a9c-Er-yfA" secondAttribute="bottom" constant="8" id="6RX-Mi-f16"/>
                                             <constraint firstItem="Im5-pD-QRb" firstAttribute="leading" secondItem="UQK-Mm-E7S" secondAttribute="leading" constant="8" id="7de-J0-8JR"/>
-                                            <constraint firstItem="0jh-5G-Tgs" firstAttribute="top" secondItem="cIE-iC-ONS" secondAttribute="bottom" constant="8" id="84o-eV-h71"/>
-                                            <constraint firstAttribute="trailing" secondItem="DdT-uH-eYD" secondAttribute="trailing" constant="15" id="9bS-kl-dLM"/>
-                                            <constraint firstItem="S99-HH-txG" firstAttribute="top" secondItem="63Q-hg-8Gs" secondAttribute="bottom" constant="8" id="Apl-WB-Yi4"/>
+                                            <constraint firstAttribute="trailing" secondItem="F7H-ue-D4t" secondAttribute="trailing" constant="16" id="8J7-1M-Xeh"/>
+                                            <constraint firstItem="cIE-iC-ONS" firstAttribute="leading" secondItem="UQK-Mm-E7S" secondAttribute="leading" constant="16" id="8Yb-B6-FOD"/>
+                                            <constraint firstItem="F7H-ue-D4t" firstAttribute="top" secondItem="cew-BK-cKI" secondAttribute="bottom" constant="8" id="A9C-MM-esc"/>
                                             <constraint firstItem="0zN-L0-En2" firstAttribute="centerY" secondItem="XVW-MO-Wg5" secondAttribute="centerY" id="B7p-24-pAW"/>
-                                            <constraint firstItem="a9c-Er-yfA" firstAttribute="leading" secondItem="hn9-cG-SfM" secondAttribute="trailing" constant="12" id="FcK-sG-ajt"/>
-                                            <constraint firstItem="Bjm-Fb-yvZ" firstAttribute="top" secondItem="0jh-5G-Tgs" secondAttribute="bottom" constant="8" id="Flr-yn-qPm"/>
-                                            <constraint firstItem="0jh-5G-Tgs" firstAttribute="leading" secondItem="UQK-Mm-E7S" secondAttribute="leading" constant="16" id="Fv2-FR-A1B"/>
+                                            <constraint firstItem="Bjm-Fb-yvZ" firstAttribute="leading" secondItem="UQK-Mm-E7S" secondAttribute="leading" constant="16" id="BKG-lr-JNS"/>
                                             <constraint firstItem="phY-B2-i5g" firstAttribute="top" secondItem="UQK-Mm-E7S" secondAttribute="top" constant="-1" id="GHC-gg-MSB"/>
-                                            <constraint firstItem="tm8-Rg-e46" firstAttribute="leading" secondItem="UQK-Mm-E7S" secondAttribute="leading" constant="16" id="J91-qN-7Nl"/>
-                                            <constraint firstItem="a9c-Er-yfA" firstAttribute="top" secondItem="phY-B2-i5g" secondAttribute="bottom" constant="9" id="JDf-Iv-Q7J"/>
-                                            <constraint firstAttribute="trailing" secondItem="vea-Li-a0J" secondAttribute="trailing" constant="15" id="L47-CI-Kgn"/>
-                                            <constraint firstItem="vea-Li-a0J" firstAttribute="leading" secondItem="cIE-iC-ONS" secondAttribute="trailing" constant="12" id="NZd-eD-IvJ"/>
-                                            <constraint firstItem="33C-2q-AHe" firstAttribute="leading" secondItem="V0t-gX-B2n" secondAttribute="trailing" constant="12" id="PpK-ZK-Bsh"/>
+                                            <constraint firstItem="0jh-5G-Tgs" firstAttribute="leading" secondItem="UQK-Mm-E7S" secondAttribute="leading" constant="16" id="Hdm-Dy-yxc"/>
+                                            <constraint firstItem="vea-Li-a0J" firstAttribute="top" secondItem="a9c-Er-yfA" secondAttribute="bottom" constant="8" id="LAa-L1-zSD"/>
+                                            <constraint firstItem="crS-1p-If6" firstAttribute="top" secondItem="Bjm-Fb-yvZ" secondAttribute="bottom" constant="8" id="Luz-hP-Fxq"/>
+                                            <constraint firstItem="cIE-iC-ONS" firstAttribute="top" secondItem="hn9-cG-SfM" secondAttribute="bottom" constant="8" id="M99-aa-OOB"/>
+                                            <constraint firstAttribute="trailing" secondItem="S99-HH-txG" secondAttribute="trailing" constant="16" id="NbM-OB-CO2"/>
+                                            <constraint firstAttribute="trailing" secondItem="DdT-uH-eYD" secondAttribute="trailing" constant="16" id="NoS-An-c8f"/>
                                             <constraint firstAttribute="bottom" secondItem="4fs-AY-STh" secondAttribute="bottom" id="QBv-SZ-IWv"/>
-                                            <constraint firstItem="S99-HH-txG" firstAttribute="leading" secondItem="tm8-Rg-e46" secondAttribute="trailing" constant="14" id="RFO-6W-LVb"/>
-                                            <constraint firstAttribute="trailing" secondItem="33C-2q-AHe" secondAttribute="trailing" constant="15" id="SSi-va-mr7"/>
-                                            <constraint firstItem="hn9-cG-SfM" firstAttribute="leading" secondItem="UQK-Mm-E7S" secondAttribute="leading" constant="16" id="TSX-iP-yQx"/>
-                                            <constraint firstItem="hn9-cG-SfM" firstAttribute="top" secondItem="XVW-MO-Wg5" secondAttribute="bottom" constant="36" id="Tpt-Nz-MaB"/>
-                                            <constraint firstAttribute="trailing" secondItem="S99-HH-txG" secondAttribute="trailing" constant="17" id="V5m-bD-Xvp"/>
-                                            <constraint firstItem="33C-2q-AHe" firstAttribute="top" secondItem="S99-HH-txG" secondAttribute="bottom" constant="8" id="a6O-c0-hBa"/>
-                                            <constraint firstAttribute="trailing" secondItem="cew-BK-cKI" secondAttribute="trailing" constant="15" id="afb-nJ-LId"/>
+                                            <constraint firstItem="a9c-Er-yfA" firstAttribute="top" secondItem="phY-B2-i5g" secondAttribute="bottom" constant="9" id="QoF-th-Cn6"/>
+                                            <constraint firstItem="cew-BK-cKI" firstAttribute="top" secondItem="vea-Li-a0J" secondAttribute="bottom" constant="8" id="T3p-hd-pqS"/>
+                                            <constraint firstItem="V0t-gX-B2n" firstAttribute="leading" secondItem="UQK-Mm-E7S" secondAttribute="leading" constant="16" id="T4Z-kQ-beQ"/>
+                                            <constraint firstItem="Bjm-Fb-yvZ" firstAttribute="top" secondItem="0jh-5G-Tgs" secondAttribute="bottom" constant="8" id="U03-2m-C56"/>
+                                            <constraint firstAttribute="trailing" secondItem="33C-2q-AHe" secondAttribute="trailing" constant="16" id="UIm-DX-B14"/>
+                                            <constraint firstItem="DdT-uH-eYD" firstAttribute="top" secondItem="33C-2q-AHe" secondAttribute="bottom" constant="8" id="UWd-DE-klK"/>
+                                            <constraint firstItem="tm8-Rg-e46" firstAttribute="leading" secondItem="UQK-Mm-E7S" secondAttribute="leading" constant="16" id="WUP-f5-9fY"/>
+                                            <constraint firstItem="63Q-hg-8Gs" firstAttribute="top" secondItem="F7H-ue-D4t" secondAttribute="bottom" constant="8" id="WsZ-N1-5dt"/>
                                             <constraint firstAttribute="bottom" secondItem="Im5-pD-QRb" secondAttribute="bottom" id="cMf-Vg-yMf"/>
                                             <constraint firstItem="Z5s-Iz-6p2" firstAttribute="leading" secondItem="UQK-Mm-E7S" secondAttribute="leading" constant="17" id="dP3-ac-cCg"/>
-                                            <constraint firstItem="V0t-gX-B2n" firstAttribute="leading" secondItem="UQK-Mm-E7S" secondAttribute="leading" constant="16" id="dyh-Mm-mEs"/>
-                                            <constraint firstItem="V0t-gX-B2n" firstAttribute="top" secondItem="tm8-Rg-e46" secondAttribute="bottom" constant="8" id="h4Q-yj-8J0"/>
-                                            <constraint firstItem="cIE-iC-ONS" firstAttribute="top" secondItem="hn9-cG-SfM" secondAttribute="bottom" constant="8" id="i1W-ou-0u1"/>
-                                            <constraint firstItem="F7H-ue-D4t" firstAttribute="leading" secondItem="Bjm-Fb-yvZ" secondAttribute="trailing" constant="12" id="iID-Cd-9Uk"/>
                                             <constraint firstAttribute="trailing" secondItem="4fs-AY-STh" secondAttribute="trailing" constant="15" id="jDC-hk-6p3"/>
-                                            <constraint firstAttribute="trailing" secondItem="63Q-hg-8Gs" secondAttribute="trailing" constant="15" id="kyB-jf-eZ8"/>
-                                            <constraint firstItem="DdT-uH-eYD" firstAttribute="top" secondItem="33C-2q-AHe" secondAttribute="bottom" constant="8" id="lMH-cq-oBC"/>
+                                            <constraint firstItem="V0t-gX-B2n" firstAttribute="top" secondItem="tm8-Rg-e46" secondAttribute="bottom" constant="8" id="kWZ-3Q-amL"/>
+                                            <constraint firstItem="S99-HH-txG" firstAttribute="top" secondItem="63Q-hg-8Gs" secondAttribute="bottom" constant="8" id="ktc-Od-IYJ"/>
                                             <constraint firstAttribute="trailing" secondItem="phY-B2-i5g" secondAttribute="trailing" constant="15" id="m8e-UF-DGJ"/>
-                                            <constraint firstItem="63Q-hg-8Gs" firstAttribute="top" secondItem="F7H-ue-D4t" secondAttribute="bottom" constant="8" id="mXV-pU-j7c"/>
-                                            <constraint firstItem="63Q-hg-8Gs" firstAttribute="leading" secondItem="crS-1p-If6" secondAttribute="trailing" constant="12" id="mmc-hw-q0O"/>
                                             <constraint firstItem="phY-B2-i5g" firstAttribute="leading" secondItem="XVW-MO-Wg5" secondAttribute="trailing" constant="2" id="mpu-iF-gBg"/>
+                                            <constraint firstAttribute="trailing" secondItem="63Q-hg-8Gs" secondAttribute="trailing" constant="16" id="nDE-7N-PQP"/>
                                             <constraint firstItem="XVW-MO-Wg5" firstAttribute="leading" secondItem="0zN-L0-En2" secondAttribute="trailing" priority="250" constant="8" id="oNX-WD-j5i"/>
-                                            <constraint firstItem="tm8-Rg-e46" firstAttribute="top" secondItem="crS-1p-If6" secondAttribute="bottom" constant="8" id="p9r-lW-4Vv"/>
-                                            <constraint firstAttribute="trailing" secondItem="F7H-ue-D4t" secondAttribute="trailing" constant="15" id="s23-q1-vBD"/>
+                                            <constraint firstAttribute="trailing" secondItem="vea-Li-a0J" secondAttribute="trailing" constant="16" id="oPq-xz-5zT"/>
+                                            <constraint firstItem="hn9-cG-SfM" firstAttribute="centerY" secondItem="a9c-Er-yfA" secondAttribute="centerY" id="oWT-cF-Qhd"/>
+                                            <constraint firstAttribute="trailing" secondItem="cew-BK-cKI" secondAttribute="trailing" constant="16" id="qU4-uL-u6N"/>
+                                            <constraint firstItem="crS-1p-If6" firstAttribute="leading" secondItem="UQK-Mm-E7S" secondAttribute="leading" constant="16" id="rbI-A1-9EC"/>
                                             <constraint firstItem="4fs-AY-STh" firstAttribute="leading" secondItem="Im5-pD-QRb" secondAttribute="trailing" constant="20" id="t0C-ba-SyJ"/>
+                                            <constraint firstItem="hn9-cG-SfM" firstAttribute="leading" secondItem="UQK-Mm-E7S" secondAttribute="leading" constant="16" id="t90-MP-cci"/>
+                                            <constraint firstItem="0jh-5G-Tgs" firstAttribute="top" secondItem="cIE-iC-ONS" secondAttribute="bottom" constant="8" id="tZQ-tr-5Nd"/>
                                             <constraint firstItem="XVW-MO-Wg5" firstAttribute="top" secondItem="Z5s-Iz-6p2" secondAttribute="bottom" constant="8.5" id="tr4-Z9-3n0"/>
-                                            <constraint firstItem="cew-BK-cKI" firstAttribute="top" secondItem="vea-Li-a0J" secondAttribute="bottom" constant="8" id="uXR-iz-ZQx"/>
-                                            <constraint firstItem="DdT-uH-eYD" firstAttribute="leading" secondItem="UQK-Mm-E7S" secondAttribute="leading" constant="194" id="zKK-X0-rv7"/>
+                                            <constraint firstItem="tm8-Rg-e46" firstAttribute="top" secondItem="crS-1p-If6" secondAttribute="bottom" constant="8" id="xQJ-O4-ZwS"/>
+                                            <constraint firstItem="33C-2q-AHe" firstAttribute="top" secondItem="S99-HH-txG" secondAttribute="bottom" constant="8" id="yVN-5D-Rt9"/>
+                                            <constraint firstAttribute="trailing" secondItem="a9c-Er-yfA" secondAttribute="trailing" constant="16" id="yYG-jX-osn"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -1106,16 +1101,93 @@
         <scene sceneID="wnc-k8-DJC">
             <objects>
                 <viewController id="n2g-5X-Qo6" customClass="RemoveMarkerController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="y0X-xm-sXs">
+                    <view key="view" contentMode="scaleToFill" id="y0X-xm-sXs" customClass="NTMapView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zDe-sF-SLa">
+                                <rect key="frame" x="16" y="584" width="343" height="63"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <subviews>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C3E-kT-o6O">
+                                        <rect key="frame" x="8" y="11" width="93" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="17"/>
+                                        <state key="normal" title="حذف">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadius">
+                                                <integer key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOpacity">
+                                                <real key="value" value="0.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
+                                                <size key="value" width="2" height="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="drawLineGeom:" destination="RoE-0d-gah" eventType="touchUpInside" id="FbT-bQ-ehH"/>
+                                            <action selector="removeMarker:" destination="n2g-5X-Qo6" eventType="touchUpInside" id="9Bz-Ad-2WI"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="keF-jQ-Jic">
+                                        <rect key="frame" x="101" y="20" width="234" height="22"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="قدم اول:">
+                                                <attributes>
+                                                    <font key="NSFont" size="13" name="IRANSansMobile-Bold"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content=" برای ایجاد پین جدید نگهدارید">
+                                                <attributes>
+                                                    <font key="NSFont" size="13" name="IRANSansMobile"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadius">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOpacity">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
+                                        <size key="value" width="2" height="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="2JR-me-Cnp"/>
                     </view>
+                    <connections>
+                        <outlet property="map" destination="y0X-xm-sXs" id="w9f-4h-KSE"/>
+                        <outlet property="marker_id" destination="keF-jQ-Jic" id="xgK-gy-0kj"/>
+                        <outlet property="removeMarkerButton" destination="C3E-kT-o6O" id="dah-Md-jeV"/>
+                        <outlet property="remove_marker_button_sheet" destination="zDe-sF-SLa" id="exp-no-apJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MKD-yt-FCj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4458" y="-379"/>
+            <point key="canvasLocation" x="4456.8000000000002" y="-379.16041979010498"/>
         </scene>
         <!--Add Label Controller-->
         <scene sceneID="2Wf-yp-lyb">
@@ -1131,6 +1203,62 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="egS-cF-jxe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4457" y="279"/>
+        </scene>
+        <!--Database Layer Controller-->
+        <scene sceneID="bXe-vh-qMv">
+            <objects>
+                <viewController id="9pM-LT-RiH" customClass="DatabaseLayerController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kX6-L1-Sjg" customClass="NTMapView">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gad-yY-Fps">
+                                <rect key="frame" x="89" y="601" width="197" height="46"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="لایه دیتابیس" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mbZ-bS-Pkb">
+                                        <rect key="frame" x="96" y="12" width="104" height="22"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES"/>
+                                        <fontDescription key="fontDescription" name="IRANSansMobile" family="IRANSansMobile" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U0s-OF-hme">
+                                        <rect key="frame" x="34" y="8" width="49" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <connections>
+                                            <action selector="toggleDatabaseLayer:" destination="9pM-LT-RiH" eventType="valueChanged" id="eEs-9E-Qd0"/>
+                                        </connections>
+                                    </switch>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadius">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOpacity">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
+                                        <size key="value" width="2" height="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="8ky-QG-20G"/>
+                    </view>
+                    <connections>
+                        <outlet property="map" destination="kX6-L1-Sjg" id="Lju-Su-8iA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j24-Kd-5ZI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4456.8000000000002" y="-1041.2293853073463"/>
         </scene>
     </scenes>
     <resources>

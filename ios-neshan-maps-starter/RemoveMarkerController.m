@@ -7,7 +7,6 @@
 //
 
 #import "RemoveMarkerController.h"
-#import <NeshanMobileSDK/NeshanMobileSDK.h>
 #import "NeshanHelper.h"
 
 @interface RemoveMarkerController ()
@@ -18,8 +17,6 @@
     // layer number in which map is added
     int BASE_MAP_INDEX;
 
-    // map UI element
-    NTMapView *map;
     // You can add some elements to a VectorElementLayer
     NTVectorElementLayer *markerLayer;
     // Marker that will be added on map
@@ -42,46 +39,90 @@
     BASE_MAP_INDEX = 0;
     markerId = 0;
     selectedMarker = nil;
-    firstTipString = @"<b>قدم اول:</b> برای ایجاد پین جدید نگهدارید!";
     secondTipString = @"<b>قدم دوم:</b> برای حذف روی پین لمس کنید!";
-
-    map = [NTMapView new];
 
     // Creating a VectorElementLayer(called markerLayer) to add all markers to it and adding it to map's layers
     markerLayer = [NTNeshanServices createVectorElementLayer];
-    [[map getLayers] add:markerLayer];
+    [[self.map getLayers] add:markerLayer];
 
 
     // add Standard_day map to layer BASE_MAP_INDEX
-    [[map getOptions] setZoomRange:[[NTRange alloc] initWithMin:4.5 max:18]];
+    [[self.map getOptions] setZoomRange:[[NTRange alloc] initWithMin:4.5 max:18]];
     NTLayer *baseMap = [NTNeshanServices createBaseMap:NT_STANDARD_DAY];
     // layer number in which map is added
-    [[map getLayers] insert:BASE_MAP_INDEX layer:baseMap];
+    [[self.map getLayers] insert:BASE_MAP_INDEX layer:baseMap];
     
     // Setting map focal position to a fixed position and setting camera zoom
-    [map setFocalPointPosition: [[NTLngLat alloc] initWithX:51.330743 y:35.767234] durationSeconds: 0];
-    [map setZoom:14 durationSeconds:0];
+    [self.map setFocalPointPosition: [[NTLngLat alloc] initWithX:51.330743 y:35.767234] durationSeconds: 0];
+    [self.map setZoom:14 durationSeconds:0];
 
 
-    self.view=map;
-    
     // when long clicked on map, a marker is added in clicked location
     // MapEventListener gets all events on map, including single tap, double tap, long press, etc
     // we should check event type by calling getClickType() on mapClickInfo (from ClickData class)
     MapEventListener *mapEventListener = [MapEventListener new];
     mapEventListener.onMapClickedBlock = ^(NTClickData * _Nonnull clickInfo) {
         
-        if ([clickInfo getClickType] == NT_CLICK_TYPE_LONG) {
-            // by calling getClickPos(), we can get position of clicking (or tapping)
-            NTLngLat *clickedLocation = [clickInfo getClickPos];
-            // removeMarker adds a marker (pretty self explanatory :D) to the clicked location
-            [self addMarker:clickedLocation withId:markerId];
-            // increment id
-            markerId++;
-        }
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if ([clickInfo getClickType] == NT_CLICK_TYPE_LONG) {
+                
+                if (self->selectedMarker == nil)
+                {
+                    NSError *err = nil;
+                    NSMutableAttributedString *attributedString =
+                    [[NSMutableAttributedString alloc]
+                     initWithData: [self->secondTipString dataUsingEncoding:NSUTF16StringEncoding]
+                     options: @{ NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType }
+                     documentAttributes: nil
+                     error: &err];
+                    
+                    [attributedString addAttributes:@{NSFontAttributeName: [self.marker_id.font fontWithSize:13]} range:NSMakeRange(0, attributedString.length)];                   
+                     
+                     self.marker_id.attributedText = attributedString;
+                }
+                else
+                    [self deselectMarker:self->selectedMarker];
+
+                // by calling getClickPos(), we can get position of clicking (or tapping)
+                NTLngLat *clickedLocation = [clickInfo getClickPos];
+                // removeMarker adds a marker (pretty self explanatory :D) to the clicked location
+                [self addMarker:clickedLocation withId:self->markerId];
+                // increment id
+                self->markerId++;
+            } else if ([clickInfo getClickType] == NT_CLICK_TYPE_SINGLE && self->selectedMarker != nil) {
+                // deselect marker when tap on map and a marker is selected
+                [self deselectMarker:self->selectedMarker];
+            }
+        });
     };
     
-    [map setMapEventListener:mapEventListener];
+    [self.map setMapEventListener:mapEventListener];
+    
+    VectorElementClickedListener *vectorElementClickedListener = [VectorElementClickedListener new];
+    vectorElementClickedListener.onVectorElementClickedBlock = ^BOOL(NTElementClickData * _Nonnull clickInfo) {
+        if ([clickInfo getClickType] == NT_CLICK_TYPE_SINGLE) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                long removeId = [[[clickInfo getVectorElement] getMetaDataElement:@"id"] getLong];
+                
+                if (self->selectedMarker != nil) {
+                    // deselect marker when tap on a marker and a marker is selected
+                    [self deselectMarker:self->selectedMarker];
+                } else {
+                    // select marker when tap on a marker
+                    [self selectMarker:(NTMarker*) [clickInfo getVectorElement]];
+                    
+                    self.marker_id.text = [NSString stringWithFormat:@"از حدف پین %ld اطمینان دارید؟", removeId];
+                    [self.removeMarkerButton setHidden:NO];
+                    
+                }
+            });
+        }
+        return true;
+    };
+    
+    //handling events on markerLayer
+    [markerLayer setVectorElementEventListener: vectorElementClickedListener];
+
 }
 
 // This method gets a LngLat as input and adds a marker on that position
@@ -116,31 +157,6 @@
     
     // Adding marker to markerLayer, or showing marker on map!
     [markerLayer add:marker];
-    
-    VectorElementClickedListener *vectorElementClickedListener = [VectorElementClickedListener new];
-    vectorElementClickedListener.onVectorElementClickedBlock = ^BOOL(NTElementClickData * _Nonnull clickInfo) {
-//         If a double click happens on a marker...
-        if ([clickInfo getClickType] == NT_CLICK_TYPE_DOUBLE) {
-            long removeId = [[[clickInfo getVectorElement] getMetaDataElement:@"id"] getLong];
-
-            // updating own ui element must run on ui thread not in map ui thread
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [NeshanHelper toast:self message:[NSString stringWithFormat:@"%@ %ld %@", @"نشانگر شماره", removeId, @"حذف شد!"]];
-            });
-
-            //getting marker reference from clickInfo and remove that marker from markerLayer
-            [markerLayer remove:[clickInfo getVectorElement]];
-
-            // If a single click happens...
-        } else if ([clickInfo getClickType] == NT_CLICK_TYPE_SINGLE) {
-            // changing marker to blue
-            [self changeMarkerToBlue:(NTMarker *)[clickInfo getVectorElement]];
-        }
-        return true;
-    };
-
-    //handling events on markerLayer
-    [markerLayer setVectorElementEventListener: vectorElementClickedListener];
 }
 
 
@@ -176,15 +192,22 @@
     [blueMarker setStyle:redMarkSt];
 }
 
-// deselect marker and collapsing bottom sheet
+// deselect marker
 -(void) deselectMarker:(NTMarker *)deselectMarker {
+    [self.remove_marker_button_sheet setHidden: YES];
     [self changeMarkerToBlue:deselectMarker];
     selectedMarker = nil;
 }
-// select marker and expanding bottom sheet
+// select marker
 -(void) selectMarker:(NTMarker *)selectMarker {
+    [self.remove_marker_button_sheet setHidden: NO];
     [self changeMarkerToRed:selectMarker];
     selectedMarker = selectMarker;
 }
 
+- (IBAction)removeMarker:(id)sender {
+    //getting marker reference from clickInfo and remove that marker from markerLayer
+    [self->markerLayer remove:selectedMarker];
+    [self deselectMarker:selectedMarker];
+}
 @end

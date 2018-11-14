@@ -6,6 +6,7 @@ target 'ios-neshan-maps-starter' do
   # use_frameworks!
   pod 'NeshanMobileSDK', '~> 0.9.4'
   pod 'AFNetworking', '~> 3.0'
+  pod 'FMDB'
 
   # Pods for ios-neshan-maps-starter
 
