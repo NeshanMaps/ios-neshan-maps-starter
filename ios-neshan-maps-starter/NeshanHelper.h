@@ -32,6 +32,14 @@ typedef void (^OnMapClickedBlock)(NTClickData* clickInfo);
 typedef void (^OnMapMovedBlock)(void);
 @property (readwrite, copy) OnMapMovedBlock onMapMovedBlock;
 
+
+typedef void (^OnMapStableBlock)(void);
+@property (readwrite, copy) OnMapStableBlock onMapStableBlock;
+
+
+typedef void (^OnMapIdleBlock)(void);
+@property (readwrite, copy) OnMapIdleBlock onMapIdleBlock;
+
 @end
 
 NS_ASSUME_NONNULL_END

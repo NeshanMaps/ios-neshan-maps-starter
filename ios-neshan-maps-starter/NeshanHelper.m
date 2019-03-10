@@ -49,5 +49,16 @@
         self.onMapMovedBlock();
 }
 
+-(void) onMapStable
+{
+    if (self.onMapStableBlock != nil)
+        self.onMapStableBlock();
+}
+
+-(void) onMapIdle
+{
+    if (self.onMapIdleBlock != nil)
+        self.onMapIdleBlock();
+}
 @end
 
